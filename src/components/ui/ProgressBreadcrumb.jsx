@@ -58,7 +58,7 @@ const ProgressBreadcrumb = ({ currentSubject = '', currentChapter = '', showBack
     if (currentChapter && currentSubject) {
       navigate(`/subject/${currentSubject?.toLowerCase()?.replace(/\s+/g, '-')}`);
     } else if (currentSubject) {
-      navigate('/subject-chapter-selection');
+      navigate('/');
     } else {
       navigate('/student-dashboard');
     }

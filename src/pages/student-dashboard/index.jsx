@@ -412,7 +412,7 @@ const StudentDashboard = () => {
         isAuthenticated={isAuthenticated}
       />
       <ProgressBreadcrumb showBackButton={false} />
-      <main className="pt-4 pb-8 px-4 lg:px-6">
+      <main className="pt-16 pb-8 px-4 lg:px-6">
         <div className="max-w-7xl mx-auto">
           {/* Welcome Section */}
           <div className="mb-8">
