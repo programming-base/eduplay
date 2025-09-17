@@ -25,7 +25,7 @@ const TopStudentLeaderboard = () => {
       points: 2850,
       level: 15,
       badges: 12,
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+      avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCdVsYxqeQrI8zqhyntFtclBKM281ZQ7-A4w&s?w=150&h=150&fit=crop&crop=face",
       streak: 28,
       rank: 1
     },
