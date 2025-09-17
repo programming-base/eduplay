@@ -51,7 +51,7 @@ const FeatureShowcase = () => {
         title: "Gamification System",
         description: "Motivate students with XP points, achievement badges, leaderboards, and level progression that makes learning addictive and fun.",
         icon: "Trophy",
-        image: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=600&h=400&fit=crop",
+        image: "https://cdn.elearningindustry.com/wp-content/uploads/2014/07/Gamification_article.jpg?w=600&h=400&fit=crop",
         benefits: [
           "XP points and leveling system",
           "Achievement badges and streaks",

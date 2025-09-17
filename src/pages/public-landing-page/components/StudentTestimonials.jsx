@@ -26,7 +26,7 @@ const StudentTestimonials = () => {
         age: 14,
         school: "Riverside High School",
         grade: "9th Grade",
-        avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+        avatar: "https://img.freepik.com/premium-photo/photo-young-indian-woman-her-mid-20s-college-student-holding-book-her-chest_878783-7115.jpg?w=150&h=150&fit=crop&crop=face",
         quote: "EduPlay made math so much fun! I never thought I'd enjoy solving equations, but the game elements and badges keep me motivated. My grades improved from C to A in just one semester!",
         subject: "Mathematics",
         improvement: "+2 Grade Levels",
