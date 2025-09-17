@@ -117,7 +117,7 @@ const ChapterCard = ({ chapter, isLocked, isPracticeMode, subjectName }) => {
         <div className="mb-3">
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">
-              {currentLanguage === 'en' ? 'Chapter' : 'Capítulo'} {chapter?.chapterNumber}
+              {currentLanguage === 'en' ? 'Chapter' : 'अध्याय'} {chapter?.chapterNumber}
             </span>
             <div className={`text-xs font-medium px-2 py-1 rounded-full border ${getDifficultyColor(currentLanguage === 'en' ? chapter?.difficulty : chapter?.difficultyEs)}`}>
               {currentLanguage === 'en' ? chapter?.difficulty : chapter?.difficultyEs}
@@ -142,13 +142,13 @@ const ChapterCard = ({ chapter, isLocked, isPracticeMode, subjectName }) => {
             </div>
             <div className="flex items-center space-x-1">
               <Icon name="FileText" size={14} />
-              <span>{chapter?.lessonCount} {currentLanguage === 'en' ? 'lessons' : 'lecciones'}</span>
+              <span>{chapter?.lessonCount} {currentLanguage === 'en' ? 'lessons' : 'पाठ'}</span>
             </div>
           </div>
           {chapter?.hasQuiz && (
             <div className="flex items-center space-x-1 text-accent">
               <Icon name="HelpCircle" size={14} />
-              <span>{currentLanguage === 'en' ? 'Quiz' : 'Cuestionario'}</span>
+              <span>{currentLanguage === 'en' ? 'Quiz' : 'प्रश्नोत्तरी'}</span>
             </div>
           )}
         </div>
@@ -157,7 +157,7 @@ const ChapterCard = ({ chapter, isLocked, isPracticeMode, subjectName }) => {
         {chapter?.prerequisites && chapter?.prerequisites?.length > 0 && (
           <div className="mb-4">
             <div className="text-xs text-muted-foreground mb-2">
-              {currentLanguage === 'en' ? 'Prerequisites:' : 'Prerrequisitos:'}
+              {currentLanguage === 'en' ? 'Prerequisites:' : 'पूर्व आवश्यकताएँ:'}
             </div>
             <div className="flex flex-wrap gap-1">
               {chapter?.prerequisites?.map((prereq, index) => (
@@ -165,7 +165,7 @@ const ChapterCard = ({ chapter, isLocked, isPracticeMode, subjectName }) => {
                   key={index}
                   className="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full"
                 >
-                  {currentLanguage === 'en' ? `Ch. ${prereq}` : `Cap. ${prereq}`}
+                  {currentLanguage === 'en' ? `Ch. ${prereq}` : `अ. ${prereq}`}
                 </span>
               ))}
             </div>
@@ -185,12 +185,12 @@ const ChapterCard = ({ chapter, isLocked, isPracticeMode, subjectName }) => {
                 iconSize={16}
               >
                 {chapter?.status === 'completed' && isPracticeMode 
-                  ? (currentLanguage === 'en' ? 'Practice' : 'Practicar')
+                  ? (currentLanguage === 'en' ? 'Practice' : 'अभ्यास')
                   : chapter?.status === 'completed' 
-                    ? (currentLanguage === 'en' ? 'Review' : 'Revisar')
+                    ? (currentLanguage === 'en' ? 'Review' : 'समीक्षा')
                     : chapter?.status === 'in-progress'
-                      ? (currentLanguage === 'en' ? 'Continue' : 'Continuar')
-                      : (currentLanguage === 'en' ? 'Start' : 'Comenzar')
+                      ? (currentLanguage === 'en' ? 'Continue' : 'जारी रखें')
+                      : (currentLanguage === 'en' ? 'Start' : 'शुरू करें')
                 }
               </Button>
               
@@ -214,7 +214,7 @@ const ChapterCard = ({ chapter, isLocked, isPracticeMode, subjectName }) => {
               iconPosition="left"
               iconSize={16}
             >
-              {currentLanguage === 'en' ? 'Locked' : 'Bloqueado'}
+              {currentLanguage === 'en' ? 'Locked' : 'लॉक किया गया'}
             </Button>
           )}
         </div>
@@ -223,7 +223,7 @@ const ChapterCard = ({ chapter, isLocked, isPracticeMode, subjectName }) => {
         {isLocked && chapter?.unlockRequirements && (
           <div className="mt-3 p-2 bg-muted/50 rounded-lg">
             <div className="text-xs text-muted-foreground">
-              {currentLanguage === 'en' ? 'To unlock:' : 'Para desbloquear:'}
+              {currentLanguage === 'en' ? 'To unlock:' : 'अनलॉक करने के लिए:'}
             </div>
             <div className="text-xs text-foreground mt-1">
               {currentLanguage === 'en' ? chapter?.unlockRequirements : chapter?.unlockRequirementsEs}

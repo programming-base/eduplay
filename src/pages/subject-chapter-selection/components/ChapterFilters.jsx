@@ -29,31 +29,31 @@ const ChapterFilters = ({
   const filterOptions = [
     {
       key: 'all',
-      label: currentLanguage === 'en' ? 'All Chapters' : 'Todos los Capítulos',
+  label: currentLanguage === 'en' ? 'All Chapters' : 'सभी अध्याय',
       icon: 'BookOpen',
       color: 'text-foreground'
     },
     {
       key: 'available',
-      label: currentLanguage === 'en' ? 'Available' : 'Disponibles',
+  label: currentLanguage === 'en' ? 'Available' : 'उपलब्ध',
       icon: 'Play',
       color: 'text-success'
     },
     {
       key: 'in-progress',
-      label: currentLanguage === 'en' ? 'In Progress' : 'En Progreso',
+  label: currentLanguage === 'en' ? 'In Progress' : 'प्रगति में',
       icon: 'Clock',
       color: 'text-warning'
     },
     {
       key: 'completed',
-      label: currentLanguage === 'en' ? 'Completed' : 'Completados',
+  label: currentLanguage === 'en' ? 'Completed' : 'पूर्ण',
       icon: 'CheckCircle',
       color: 'text-success'
     },
     {
       key: 'locked',
-      label: currentLanguage === 'en' ? 'Locked' : 'Bloqueados',
+  label: currentLanguage === 'en' ? 'Locked' : 'लॉक किए गए',
       icon: 'Lock',
       color: 'text-muted-foreground'
     }
@@ -97,13 +97,12 @@ const ChapterFilters = ({
               />
             </button>
             <span className="text-sm font-medium text-foreground">
-              {currentLanguage === 'en' ? 'Practice Mode' : 'Modo Práctica'}
+              {currentLanguage === 'en' ? 'Practice Mode' : 'अभ्यास मोड'}
             </span>
             <div className="group relative">
               <Icon name="Info" size={16} className="text-muted-foreground cursor-help" />
               <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-64 p-2 bg-popover border border-border rounded-md shadow-lg text-xs text-foreground opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                {currentLanguage === 'en' ?'Practice mode allows you to revisit completed chapters without affecting your progress.' :'El modo práctica te permite revisar capítulos completados sin afectar tu progreso.'
-                }
+                {currentLanguage === 'en' ? 'Practice mode allows you to revisit completed chapters without affecting your progress.' : 'अभ्यास मोड आपको अपनी प्रगति को प्रभावित किए बिना पूर्ण अध्यायों को पुनः देखने की अनुमति देता है।'}
               </div>
             </div>
           </div>
@@ -113,7 +112,7 @@ const ChapterFilters = ({
             <div className="w-64">
               <Input
                 type="search"
-                placeholder={currentLanguage === 'en' ? 'Search chapters...' : 'Buscar capítulos...'}
+                placeholder={currentLanguage === 'en' ? 'Search chapters...' : 'अध्याय खोजें...'}
                 value={searchQuery}
                 onChange={(e) => onSearchChange(e?.target?.value)}
                 className="w-full"
@@ -129,7 +128,7 @@ const ChapterFilters = ({
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Icon name="Filter" size={16} />
               <span>
-                {currentLanguage === 'en' ? 'Showing:' : 'Mostrando:'} {filterOptions?.find(f => f?.key === activeFilter)?.label}
+                {currentLanguage === 'en' ? 'Showing:' : 'दिखा रहे हैं:'} {filterOptions?.find(f => f?.key === activeFilter)?.label}
               </span>
             </div>
             <Button
@@ -140,7 +139,7 @@ const ChapterFilters = ({
               iconPosition="left"
               iconSize={14}
             >
-              {currentLanguage === 'en' ? 'Clear Filter' : 'Limpiar Filtro'}
+              {currentLanguage === 'en' ? 'Clear Filter' : 'फ़िल्टर साफ़ करें'}
             </Button>
           </div>
         </div>

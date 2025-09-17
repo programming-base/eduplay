@@ -37,13 +37,13 @@ const LoginForm = ({ onLogin }) => {
     const newErrors = {};
 
     if (!formData?.teacherId?.trim()) {
-      newErrors.teacherId = currentLanguage === 'en' ?'Teacher ID is required' :'Se requiere ID de maestro';
+      newErrors.teacherId = currentLanguage === 'en' ? 'Teacher ID is required' : 'शिक्षक आईडी आवश्यक है';
     }
 
     if (!formData?.password?.trim()) {
-      newErrors.password = currentLanguage === 'en' ?'Password is required' :'Se requiere contraseña';
+      newErrors.password = currentLanguage === 'en' ? 'Password is required' : 'पासवर्ड आवश्यक है';
     } else if (formData?.password?.length < 6) {
-      newErrors.password = currentLanguage === 'en' ?'Password must be at least 6 characters' :'La contraseña debe tener al menos 6 caracteres';
+      newErrors.password = currentLanguage === 'en' ? 'Password must be at least 6 characters' : 'पासवर्ड कम से कम 6 अक्षरों का होना चाहिए';
     }
 
     setErrors(newErrors);
@@ -90,7 +90,7 @@ const LoginForm = ({ onLogin }) => {
     } else {
       // Failed login
       setErrors({
-        general: currentLanguage === 'en' ?'Invalid Teacher ID or password. Please try: TEACH001 / teacher123' :'ID de maestro o contraseña inválidos. Pruebe: TEACH001 / teacher123'
+        general: currentLanguage === 'en' ? 'Invalid Teacher ID or password. Please try: TEACH001 / teacher123' : 'अमान्य शिक्षक आईडी या पासवर्ड। कृपया प्रयास करें: TEACH001 / teacher123'
       });
     }
 
@@ -98,7 +98,7 @@ const LoginForm = ({ onLogin }) => {
   };
 
   const handleForgotPassword = () => {
-    alert(currentLanguage === 'en' ?'Please contact your school administrator for password reset.' :'Póngase en contacto con el administrador de su escuela para restablecer la contraseña.');
+  alert(currentLanguage === 'en' ? 'Please contact your school administrator for password reset.' : 'पासवर्ड रीसेट के लिए कृपया अपने स्कूल प्रशासक से संपर्क करें।');
   };
 
   return (
@@ -110,10 +110,10 @@ const LoginForm = ({ onLogin }) => {
             <Icon name="GraduationCap" size={32} color="white" />
           </div>
           <h1 className="text-2xl font-bold text-foreground mb-2">
-            {currentLanguage === 'en' ? 'Teacher Login' : 'Acceso de Maestro'}
+            {currentLanguage === 'en' ? 'Teacher Login' : 'शिक्षक लॉगिन'}
           </h1>
           <p className="text-muted-foreground">
-            {currentLanguage === 'en' ?'Access your classroom dashboard' :'Accede a tu panel de aula'}
+            {currentLanguage === 'en' ? 'Access your classroom dashboard' : 'अपने कक्षा डैशबोर्ड तक पहुँचें'}
           </p>
         </div>
 
@@ -128,7 +128,7 @@ const LoginForm = ({ onLogin }) => {
                   {errors?.general}
                 </p>
                 <p className="text-xs text-error/80 mt-1">
-                  {currentLanguage === 'en' ?'Demo credentials: TEACH001, TEACH002, TEACH003' :'Credenciales de demostración: TEACH001, TEACH002, TEACH003'}
+                  {currentLanguage === 'en' ?'Demo credentials: TEACH001, TEACH002, TEACH003' :'डेमो क्रेडेंशियल्स: TEACH001, TEACH002, TEACH003'}
                 </p>
               </div>
             </div>
@@ -136,12 +136,12 @@ const LoginForm = ({ onLogin }) => {
 
           {/* Teacher ID Input */}
           <Input
-            label={currentLanguage === 'en' ? 'Teacher ID' : 'ID de Maestro'}
+            label={currentLanguage === 'en' ? 'Teacher ID' : 'शिक्षक आईडी'}
             type="text"
             name="teacherId"
             value={formData?.teacherId}
             onChange={handleInputChange}
-            placeholder={currentLanguage === 'en' ? 'Enter your Teacher ID' : 'Ingrese su ID de maestro'}
+            placeholder={currentLanguage === 'en' ? 'Enter your Teacher ID' : 'अपना शिक्षक आईडी दर्ज करें'}
             error={errors?.teacherId}
             required
             className="text-base"
@@ -150,12 +150,12 @@ const LoginForm = ({ onLogin }) => {
           {/* Password Input */}
           <div className="relative">
             <Input
-              label={currentLanguage === 'en' ? 'Password' : 'Contraseña'}
+              label={currentLanguage === 'en' ? 'Password' : 'पासवर्ड'}
               type={showPassword ? 'text' : 'password'}
               name="password"
               value={formData?.password}
               onChange={handleInputChange}
-              placeholder={currentLanguage === 'en' ? 'Enter your password' : 'Ingrese su contraseña'}
+              placeholder={currentLanguage === 'en' ? 'Enter your password' : 'अपना पासवर्ड दर्ज करें'}
               error={errors?.password}
               required
               className="text-base pr-12"
@@ -181,8 +181,8 @@ const LoginForm = ({ onLogin }) => {
             className="text-base font-semibold"
           >
             {isLoading 
-              ? (currentLanguage === 'en' ? 'Signing In...' : 'Iniciando sesión...') 
-              : (currentLanguage === 'en' ? 'Sign In' : 'Iniciar Sesión')}
+              ? (currentLanguage === 'en' ? 'Signing In...' : 'साइन इन हो रहा है...') 
+              : (currentLanguage === 'en' ? 'Sign In' : 'साइन इन करें')}
           </Button>
 
           {/* Forgot Password Link */}
@@ -192,7 +192,7 @@ const LoginForm = ({ onLogin }) => {
               onClick={handleForgotPassword}
               className="text-sm text-primary hover:text-primary/80 transition-colors duration-150 font-medium"
             >
-              {currentLanguage === 'en' ? 'Forgot Password?' : '¿Olvidaste tu contraseña?'}
+              {currentLanguage === 'en' ? 'Forgot Password?' : 'पासवर्ड भूल गए?'}
             </button>
           </div>
         </form>
@@ -203,7 +203,7 @@ const LoginForm = ({ onLogin }) => {
             <Icon name="Info" size={16} className="text-primary mt-0.5 shrink-0" />
             <div>
               <p className="text-xs font-medium text-foreground mb-1">
-                {currentLanguage === 'en' ? 'Demo Credentials:' : 'Credenciales de Demostración:'}
+                {currentLanguage === 'en' ? 'Demo Credentials:' : 'डेमो क्रेडेंशियल्स:'}
               </p>
               <div className="text-xs text-muted-foreground space-y-1">
                 <div>TEACH001 / teacher123</div>

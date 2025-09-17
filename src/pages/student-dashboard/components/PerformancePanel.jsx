@@ -31,10 +31,10 @@ const PerformancePanel = ({ studentData, className = '' }) => {
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-2xl font-bold mb-1">
-            {currentLanguage === 'en' ? `Hi, ${studentData?.name}!` : `¡Hola, ${studentData?.name}!`}
+            {currentLanguage === 'en' ? `Hi, ${studentData?.name}!` : `नमस्ते, ${studentData?.name}!`}
           </h2>
           <p className="text-primary-foreground/80">
-            {currentLanguage === 'en' ? 'Ready to learn today?' : '¿Listo para aprender hoy?'}
+            {currentLanguage === 'en' ? 'Ready to learn today?' : 'क्या आप आज सीखने के लिए तैयार हैं?'}
           </p>
         </div>
         <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
@@ -48,7 +48,7 @@ const PerformancePanel = ({ studentData, className = '' }) => {
           <div className="flex items-center space-x-2 mb-2">
             <Icon name="Zap" size={20} color="white" />
             <span className="text-sm font-medium">
-              {currentLanguage === 'en' ? 'Total XP' : 'XP Total'}
+              {currentLanguage === 'en' ? 'Total XP' : 'कुल XP'}
             </span>
           </div>
           <p className="text-2xl font-bold">{studentData?.totalXP?.toLocaleString()}</p>
@@ -59,7 +59,7 @@ const PerformancePanel = ({ studentData, className = '' }) => {
           <div className="flex items-center space-x-2 mb-2">
             <Icon name="Trophy" size={20} color="white" />
             <span className="text-sm font-medium">
-              {currentLanguage === 'en' ? 'Level' : 'Nivel'}
+              {currentLanguage === 'en' ? 'Level' : 'स्तर'}
             </span>
           </div>
           <p className="text-2xl font-bold">{studentData?.currentLevel}</p>
@@ -70,7 +70,7 @@ const PerformancePanel = ({ studentData, className = '' }) => {
           <div className="flex items-center space-x-2 mb-2">
             <Icon name="Award" size={20} color="white" />
             <span className="text-sm font-medium">
-              {currentLanguage === 'en' ? 'Badges' : 'Insignias'}
+              {currentLanguage === 'en' ? 'Badges' : 'बैज'}
             </span>
           </div>
           <p className="text-2xl font-bold">{studentData?.totalBadges}</p>
@@ -81,7 +81,7 @@ const PerformancePanel = ({ studentData, className = '' }) => {
           <div className="flex items-center space-x-2 mb-2">
             <Icon name="Flame" size={20} color="white" />
             <span className="text-sm font-medium">
-              {currentLanguage === 'en' ? 'Streak' : 'Racha'}
+              {currentLanguage === 'en' ? 'Streak' : 'स्ट्रीक'}
             </span>
           </div>
           <p className="text-2xl font-bold">{studentData?.currentStreak}</p>
@@ -91,10 +91,10 @@ const PerformancePanel = ({ studentData, className = '' }) => {
       <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm">
         <div className="flex items-center justify-between mb-3">
           <span className="font-medium">
-            {currentLanguage === 'en' ? 'Progress to Next Level' : 'Progreso al Siguiente Nivel'}
+            {currentLanguage === 'en' ? 'Progress to Next Level' : 'अगले स्तर की प्रगति'}
           </span>
           <span className="text-sm">
-            {getNextLevelXP()} XP {currentLanguage === 'en' ? 'to go' : 'restantes'}
+            {getNextLevelXP()} XP {currentLanguage === 'en' ? 'to go' : 'शेष'}
           </span>
         </div>
         <div className="w-full h-3 bg-white/20 rounded-full overflow-hidden">

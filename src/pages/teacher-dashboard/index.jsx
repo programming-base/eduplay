@@ -95,7 +95,7 @@ const TeacherDashboard = () => {
     { id: 'overview', label: currentLanguage === 'en' ? 'Overview' : 'Resumen', icon: 'LayoutDashboard' },
     { id: 'content', label: currentLanguage === 'en' ? 'Content' : 'Contenido', icon: 'FileText' },
     { id: 'analytics', label: currentLanguage === 'en' ? 'Analytics' : 'Análisis', icon: 'BarChart3' },
-    { id: 'students', label: currentLanguage === 'en' ? 'Students' : 'Estudiantes', icon: 'Users' },
+  { id: 'students', label: currentLanguage === 'en' ? 'Students' : 'छात्र', icon: 'Users' },
     { id: 'badges', label: currentLanguage === 'en' ? 'Badges' : 'Insignias', icon: 'Award' }
   ];
 

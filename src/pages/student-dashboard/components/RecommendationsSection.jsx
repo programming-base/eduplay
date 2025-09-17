@@ -56,22 +56,22 @@ const RecommendationsSection = ({ recommendations, className = '' }) => {
       case 'high':
         return {
           color: 'bg-error text-white',
-          text: currentLanguage === 'en' ? 'High Priority' : 'Alta Prioridad'
+          text: currentLanguage === 'en' ? 'High Priority' : 'उच्च प्राथमिकता'
         };
       case 'medium':
         return {
           color: 'bg-accent text-white',
-          text: currentLanguage === 'en' ? 'Medium Priority' : 'Prioridad Media'
+          text: currentLanguage === 'en' ? 'Medium Priority' : 'मध्यम प्राथमिकता'
         };
       case 'low':
         return {
           color: 'bg-success text-white',
-          text: currentLanguage === 'en' ? 'Low Priority' : 'Baja Prioridad'
+          text: currentLanguage === 'en' ? 'Low Priority' : 'निम्न प्राथमिकता'
         };
       default:
         return {
           color: 'bg-muted text-muted-foreground',
-          text: currentLanguage === 'en' ? 'Suggested' : 'Sugerido'
+          text: currentLanguage === 'en' ? 'Suggested' : 'सुझावित'
         };
     }
   };
@@ -85,10 +85,10 @@ const RecommendationsSection = ({ recommendations, className = '' }) => {
           </div>
           <div>
             <h3 className="text-lg font-bold text-foreground">
-              {currentLanguage === 'en' ? 'Recommended for You' : 'Recomendado para Ti'}
+              {currentLanguage === 'en' ? 'Recommended for You' : 'आपके लिए अनुशंसित'}
             </h3>
             <p className="text-sm text-muted-foreground">
-              {currentLanguage === 'en' ? 'Based on your performance' : 'Basado en tu rendimiento'}
+              {currentLanguage === 'en' ? 'Based on your performance' : 'आपके प्रदर्शन के आधार पर'}
             </p>
           </div>
         </div>
@@ -140,15 +140,15 @@ const RecommendationsSection = ({ recommendations, className = '' }) => {
                             <Icon name="BarChart3" size={14} />
                             <span>
                               {currentLanguage === 'en' ? recommendation?.difficulty : 
-                                recommendation?.difficulty === 'Easy' ? 'Fácil' :
-                                recommendation?.difficulty === 'Medium' ? 'Medio' : 'Difícil'}
+                                recommendation?.difficulty === 'Easy' ? 'आसान' :
+                                recommendation?.difficulty === 'Medium' ? 'मध्यम' : 'कठिन'}
                             </span>
                           </div>
                         )}
                       </div>
 
                       <Button variant="ghost" size="sm" iconName="ArrowRight" iconPosition="right" iconSize={14}>
-                        {currentLanguage === 'en' ? 'Start' : 'Comenzar'}
+                        {currentLanguage === 'en' ? 'Start' : 'शुरू करें'}
                       </Button>
                     </div>
                   </div>
@@ -161,7 +161,7 @@ const RecommendationsSection = ({ recommendations, className = '' }) => {
       {/* View All Button */}
       <div className="mt-6 pt-4 border-t border-border text-center">
         <Button variant="outline" iconName="Plus" iconPosition="left" iconSize={16}>
-          {currentLanguage === 'en' ? 'View All Recommendations' : 'Ver Todas las Recomendaciones'}
+          {currentLanguage === 'en' ? 'View All Recommendations' : 'सभी अनुशंसाएँ देखें'}
         </Button>
       </div>
     </div>

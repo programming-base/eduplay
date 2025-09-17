@@ -44,7 +44,7 @@ const ClassOverviewCard = ({ classData, onViewDetails, onQuickAction }) => {
             <div className="flex items-center space-x-2">
               <Icon name="Users" size={16} className="text-primary" />
               <span className="text-sm text-foreground">
-                {classData?.totalStudents} {currentLanguage === 'en' ? 'Students' : 'Estudiantes'}
+                {classData?.totalStudents} {currentLanguage === 'en' ? 'Students' : 'छात्र'}
               </span>
             </div>
             <div className="flex items-center space-x-2">

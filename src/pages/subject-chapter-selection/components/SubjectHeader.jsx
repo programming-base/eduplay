@@ -64,13 +64,13 @@ const SubjectHeader = ({ subject, totalChapters, completedChapters, totalXP, cur
               <div className="flex items-center space-x-1">
                 <Icon name="BookOpen" size={16} />
                 <span>
-                  {completedChapters}/{totalChapters} {currentLanguage === 'en' ? 'Chapters' : 'Capítulos'}
+                  {completedChapters}/{totalChapters} {currentLanguage === 'en' ? 'Chapters' : 'अध्याय'}
                 </span>
               </div>
               <div className="flex items-center space-x-1">
                 <Icon name="Clock" size={16} />
                 <span>
-                  {subject?.estimatedHours} {currentLanguage === 'en' ? 'hours' : 'horas'}
+                  {subject?.estimatedHours} {currentLanguage === 'en' ? 'hours' : 'घंटे'}
                 </span>
               </div>
             </div>
@@ -83,7 +83,7 @@ const SubjectHeader = ({ subject, totalChapters, completedChapters, totalXP, cur
           <div className="text-center">
             <div className="text-2xl font-bold text-foreground">{Math.round(progressPercentage)}%</div>
             <div className="text-sm text-muted-foreground mb-2">
-              {currentLanguage === 'en' ? 'Progress' : 'Progreso'}
+              {currentLanguage === 'en' ? 'Progress' : 'प्रगति'}
             </div>
             <div className="w-20 h-2 bg-muted rounded-full mx-auto overflow-hidden">
               <div 
@@ -97,7 +97,7 @@ const SubjectHeader = ({ subject, totalChapters, completedChapters, totalXP, cur
           <div className="text-center">
             <div className="text-2xl font-bold text-primary">{currentXP}</div>
             <div className="text-sm text-muted-foreground mb-2">
-              {currentLanguage === 'en' ? 'XP Points' : 'Puntos XP'}
+              {currentLanguage === 'en' ? 'XP Points' : 'XP अंक'}
             </div>
             <div className="w-20 h-2 bg-muted rounded-full mx-auto overflow-hidden">
               <div 
@@ -112,10 +112,10 @@ const SubjectHeader = ({ subject, totalChapters, completedChapters, totalXP, cur
       <div className="mt-6">
         <div className="flex items-center justify-between mb-2">
           <span className="text-sm font-medium text-foreground">
-            {currentLanguage === 'en' ? 'Overall Progress' : 'Progreso General'}
+            {currentLanguage === 'en' ? 'Overall Progress' : 'कुल प्रगति'}
           </span>
           <span className="text-sm text-muted-foreground">
-            {completedChapters}/{totalChapters} {currentLanguage === 'en' ? 'completed' : 'completados'}
+            {completedChapters}/{totalChapters} {currentLanguage === 'en' ? 'completed' : 'पूर्ण'}
           </span>
         </div>
         <div className="w-full h-3 bg-muted rounded-full overflow-hidden">

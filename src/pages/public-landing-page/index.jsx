@@ -24,88 +24,89 @@ const PublicLandingPage = () => {
     return () => window.removeEventListener('languageChanged', handleLanguageChange);
   }, []);
 
-  const content = {
-    en: {
-      footer: {
-        description: "EduPlay transforms K-12 education through gamified learning experiences that engage students and empower teachers.",
-        quickLinks: "Quick Links",
-        forEducators: "For Educators",
-        forStudents: "For Students",
-        support: "Support",
-        legal: "Legal",
-        links: {
-          about: "About Us",
-          features: "Features",
-          pricing: "Pricing",
-          contact: "Contact",
-          teacherLogin: "Teacher Login",
-          teacherDashboard: "Teacher Dashboard",
-          analytics: "Analytics",
-          resources: "Resources",
-          studentLogin: "Student Login",
-          subjects: "Subjects",
-          achievements: "Achievements",
-          leaderboard: "Leaderboard",
-          helpCenter: "Help Center",
-          tutorials: "Tutorials",
-          faq: "FAQ",
-          community: "Community",
-          privacy: "Privacy Policy",
-          terms: "Terms of Service",
-          cookies: "Cookie Policy"
-        },
-        newsletter: {
-          title: "Stay Updated",
-          description: "Get the latest updates on new features and educational insights.",
-          placeholder: "Enter your email",
-          subscribe: "Subscribe"
-        },
-        copyright: "All rights reserved.",
-        madeWith: "Made with",
-        forEducation: "for education"
-      }
-    },
-    es: {
-      footer: {
-        description: "EduPlay transforma la educación K-12 a través de experiencias de aprendizaje gamificadas que involucran a los estudiantes y empoderan a los maestros.",
-        quickLinks: "Enlaces Rápidos",
-        forEducators: "Para Educadores",
-        forStudents: "Para Estudiantes",
-        support: "Soporte",
-        legal: "Legal",
-        links: {
-          about: "Acerca de Nosotros",
-          features: "Características",
-          pricing: "Precios",
-          contact: "Contacto",
-          teacherLogin: "Acceso Docente",
-          teacherDashboard: "Panel Docente",
-          analytics: "Análisis",
-          resources: "Recursos",
-          studentLogin: "Acceso Estudiante",
-          subjects: "Materias",
-          achievements: "Logros",
-          leaderboard: "Tabla de Clasificación",
-          helpCenter: "Centro de Ayuda",
-          tutorials: "Tutoriales",
-          faq: "Preguntas Frecuentes",
-          community: "Comunidad",
-          privacy: "Política de Privacidad",
-          terms: "Términos de Servicio",
-          cookies: "Política de Cookies"
-        },
-        newsletter: {
-          title: "Mantente Actualizado",
-          description: "Obtén las últimas actualizaciones sobre nuevas características y perspectivas educativas.",
-          placeholder: "Ingresa tu email",
-          subscribe: "Suscribirse"
-        },
-        copyright: "Todos los derechos reservados.",
-        madeWith: "Hecho con",
-        forEducation: "para la educación"
-      }
+const content = {
+  en: {
+    footer: {
+      description: "EduPlay transforms K-12 education through gamified learning experiences that engage students and empower teachers.",
+      quickLinks: "Quick Links",
+      forEducators: "For Educators",
+      forStudents: "For Students",
+      support: "Support",
+      legal: "Legal",
+      links: {
+        about: "About Us",
+        features: "Features",
+        pricing: "Pricing",
+        contact: "Contact",
+        teacherLogin: "Teacher Login",
+        teacherDashboard: "Teacher Dashboard",
+        analytics: "Analytics",
+        resources: "Resources",
+        studentLogin: "Student Login",
+        subjects: "Subjects",
+        achievements: "Achievements",
+        leaderboard: "Leaderboard",
+        helpCenter: "Help Center",
+        tutorials: "Tutorials",
+        faq: "FAQ",
+        community: "Community",
+        privacy: "Privacy Policy",
+        terms: "Terms of Service",
+        cookies: "Cookie Policy"
+      },
+      newsletter: {
+        title: "Stay Updated",
+        description: "Get the latest updates on new features and educational insights.",
+        placeholder: "Enter your email",
+        subscribe: "Subscribe"
+      },
+      copyright: "All rights reserved.",
+      madeWith: "Made with",
+      forEducation: "for education"
     }
-  };
+  },
+  hi: {
+    footer: {
+      description: "EduPlay कक्षा 1 से 12 तक की शिक्षा को गेमिफाइड लर्निंग अनुभवों के माध्यम से बदलता है, जो छात्रों को जोड़ता है और शिक्षकों को सशक्त बनाता है।",
+      quickLinks: "त्वरित लिंक",
+      forEducators: "शिक्षकों के लिए",
+      forStudents: "छात्रों के लिए",
+      support: "सहायता",
+      legal: "कानूनी",
+      links: {
+        about: "हमारे बारे में",
+        features: "विशेषताएँ",
+        pricing: "मूल्य निर्धारण",
+        contact: "संपर्क",
+        teacherLogin: "शिक्षक लॉगिन",
+        teacherDashboard: "शिक्षक डैशबोर्ड",
+        analytics: "विश्लेषण",
+        resources: "संसाधन",
+        studentLogin: "छात्र लॉगिन",
+        subjects: "विषय",
+        achievements: "उपलब्धियाँ",
+        leaderboard: "लीडरबोर्ड",
+        helpCenter: "सहायता केंद्र",
+        tutorials: "ट्यूटोरियल",
+        faq: "अक्सर पूछे जाने वाले प्रश्न",
+        community: "समुदाय",
+        privacy: "गोपनीयता नीति",
+        terms: "सेवा की शर्तें",
+        cookies: "कुकी नीति"
+      },
+      newsletter: {
+        title: "अपडेट प्राप्त करें",
+        description: "नई विशेषताओं और शैक्षिक जानकारी पर नवीनतम अपडेट प्राप्त करें।",
+        placeholder: "अपना ईमेल दर्ज करें",
+        subscribe: "सदस्यता लें"
+      },
+      copyright: "सभी अधिकार सुरक्षित।",
+      madeWith: "बनाया गया",
+      forEducation: "शिक्षा के लिए"
+    }
+  }
+};
+
 
   const currentContent = content?.[currentLanguage];
   const currentYear = new Date()?.getFullYear();
@@ -117,7 +118,7 @@ const PublicLandingPage = () => {
   const handleNewsletterSubmit = (e) => {
     e?.preventDefault();
     // Mock newsletter subscription
-    alert(currentLanguage === 'en' ? 'Thank you for subscribing!' : '¡Gracias por suscribirte!');
+  alert(currentLanguage === 'en' ? 'Thank you for subscribing!' : 'सदस्यता लेने के लिए धन्यवाद!');
   };
 
   return (
@@ -147,12 +148,10 @@ const PublicLandingPage = () => {
           <div className="container mx-auto px-4 lg:px-6 text-center">
             <div className="max-w-3xl mx-auto space-y-8">
               <h2 className="text-3xl lg:text-4xl font-bold text-white">
-                {currentLanguage === 'en' ?'Ready to Transform Your Classroom?' :'¿Listo para Transformar tu Aula?'
-                }
+                {currentLanguage === 'en' ? 'Ready to Transform Your Classroom?' : 'क्या आप अपनी कक्षा को बदलने के लिए तैयार हैं?'}
               </h2>
               <p className="text-xl text-white/90">
-                {currentLanguage === 'en' ?'Join thousands of educators and students who are already experiencing the future of learning.' :'Únete a miles de educadores y estudiantes que ya están experimentando el futuro del aprendizaje.'
-                }
+                {currentLanguage === 'en' ?'Join thousands of educators and students who are already experiencing the future of learning.' :'हजारों शिक्षकों और छात्रों से जुड़ें जो पहले से ही सीखने के भविष्य का अनुभव कर रहे हैं।'}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
@@ -163,7 +162,7 @@ const PublicLandingPage = () => {
                   iconPosition="left"
                   className="text-lg px-8 py-4"
                 >
-                  {currentLanguage === 'en' ? 'Start as Teacher' : 'Comenzar como Maestro'}
+                  {currentLanguage === 'en' ? 'Start as Teacher' : 'शिक्षक के रूप में शुरू करें'}
                 </Button>
                 <Button
                   variant="outline"
@@ -173,7 +172,7 @@ const PublicLandingPage = () => {
                   iconPosition="left"
                   className="text-lg px-8 py-4 bg-white/10 border-white/20 text-white hover:bg-white/20"
                 >
-                  {currentLanguage === 'en' ? 'Start as Student' : 'Comenzar como Estudiante'}
+                  {currentLanguage === 'en' ? 'Start as Student' : 'छात्र के रूप में शुरू करें'}
                 </Button>
               </div>
             </div>

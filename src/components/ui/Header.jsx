@@ -35,27 +35,27 @@ const Header = ({ userRole = null, userName = '', isAuthenticated = false }) => 
   const getNavigationItems = () => {
     if (!isAuthenticated) {
       return [
-        { path: '/public-landing-page', label: currentLanguage === 'en' ? 'Home' : 'Inicio', icon: 'Home' },
-        { path: '/teacher-login', label: currentLanguage === 'en' ? 'Teacher Login' : 'Acceso Docente', icon: 'GraduationCap' },
-        { path: '/student-login', label: currentLanguage === 'en' ? 'Student Login' : 'Acceso Estudiante', icon: 'BookOpen' }
+        { path: '/public-landing-page', label: currentLanguage === 'en' ? 'Home' : 'होम', icon: 'Home' },
+        { path: '/teacher-login', label: currentLanguage === 'en' ? 'Teacher Login' : 'शिक्षक लॉगिन', icon: 'GraduationCap' },
+        { path: '/student-login', label: currentLanguage === 'en' ? 'Student Login' : 'छात्र लॉगिन', icon: 'BookOpen' }
       ];
     }
 
     if (userRole === 'teacher') {
       return [
-        { path: '/teacher-dashboard', label: currentLanguage === 'en' ? 'Dashboard' : 'Panel', icon: 'LayoutDashboard' },
-        { path: '/analytics', label: currentLanguage === 'en' ? 'Analytics' : 'Análisis', icon: 'BarChart3' },
-        { path: '/students', label: currentLanguage === 'en' ? 'Students' : 'Estudiantes', icon: 'Users' },
-        { path: '/content', label: currentLanguage === 'en' ? 'Content' : 'Contenido', icon: 'FileText' }
+        { path: '/teacher-dashboard', label: currentLanguage === 'en' ? 'Dashboard' : 'डैशबोर्ड', icon: 'LayoutDashboard' },
+        { path: '/analytics', label: currentLanguage === 'en' ? 'Analytics' : 'विश्लेषण', icon: 'BarChart3' },
+        { path: '/students', label: currentLanguage === 'en' ? 'Students' : 'छात्र', icon: 'Users' },
+        { path: '/content', label: currentLanguage === 'en' ? 'Content' : 'सामग्री', icon: 'FileText' }
       ];
     }
 
     if (userRole === 'student') {
       return [
-        { path: '/student-dashboard', label: currentLanguage === 'en' ? 'Dashboard' : 'Panel', icon: 'LayoutDashboard' },
-        { path: '/subject-chapter-selection', label: currentLanguage === 'en' ? 'Subjects' : 'Materias', icon: 'BookOpen' },
-        { path: '/progress', label: currentLanguage === 'en' ? 'Progress' : 'Progreso', icon: 'TrendingUp' },
-        { path: '/achievements', label: currentLanguage === 'en' ? 'Achievements' : 'Logros', icon: 'Award' }
+        { path: '/student-dashboard', label: currentLanguage === 'en' ? 'Dashboard' : 'डैशबोर्ड', icon: 'LayoutDashboard' },
+        { path: '/subject-chapter-selection', label: currentLanguage === 'en' ? 'Subjects' : 'विषय', icon: 'BookOpen' },
+        { path: '/progress', label: currentLanguage === 'en' ? 'Progress' : 'प्रगति', icon: 'TrendingUp' },
+        { path: '/achievements', label: currentLanguage === 'en' ? 'Achievements' : 'उपलब्धियां', icon: 'Award' }
       ];
     }
 
@@ -100,7 +100,7 @@ const Header = ({ userRole = null, userName = '', isAuthenticated = false }) => 
           {navigationItems?.length > 4 && (
             <div className="relative group">
               <Button variant="ghost" iconName="MoreHorizontal" iconSize={18}>
-                {currentLanguage === 'en' ? 'More' : 'Más'}
+                {currentLanguage === 'en' ? 'More' : 'अधिक'}
               </Button>
               <div className="absolute right-0 top-full mt-1 w-48 bg-popover border border-border rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 {navigationItems?.slice(4)?.map((item) => (
@@ -124,7 +124,7 @@ const Header = ({ userRole = null, userName = '', isAuthenticated = false }) => 
           <div className="relative group">
             <Button variant="ghost" size="sm" iconName="Globe" iconSize={18}>
               <span className="hidden sm:inline ml-1">
-                {currentLanguage === 'en' ? 'EN' : 'ES'}
+                {currentLanguage === 'en' ? 'EN' : 'हिन्दी'}
               </span>
             </Button>
             <div className="absolute right-0 top-full mt-1 w-32 bg-popover border border-border rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -135,10 +135,10 @@ const Header = ({ userRole = null, userName = '', isAuthenticated = false }) => 
                 English
               </button>
               <button
-                onClick={() => handleLanguageChange('es')}
-                className={`w-full px-3 py-2 text-left text-sm hover:bg-muted last:rounded-b-md ${currentLanguage === 'es' ? 'bg-muted' : ''}`}
+                onClick={() => handleLanguageChange('hi')}
+                className={`w-full px-3 py-2 text-left text-sm hover:bg-muted last:rounded-b-md ${currentLanguage === 'hi' ? 'bg-muted' : ''}`}
               >
-                Español
+                हिन्दी
               </button>
             </div>
           </div>
@@ -155,14 +155,14 @@ const Header = ({ userRole = null, userName = '', isAuthenticated = false }) => 
                   className="w-full px-3 py-2 text-left text-sm hover:bg-muted flex items-center space-x-2 first:rounded-t-md"
                 >
                   <Icon name="Settings" size={16} />
-                  <span>{currentLanguage === 'en' ? 'Settings' : 'Configuración'}</span>
+                  <span>{currentLanguage === 'en' ? 'Settings' : 'सेटिंग्स'}</span>
                 </button>
                 <button
                   onClick={handleLogout}
                   className="w-full px-3 py-2 text-left text-sm hover:bg-muted flex items-center space-x-2 last:rounded-b-md text-error"
                 >
                   <Icon name="LogOut" size={16} />
-                  <span>{currentLanguage === 'en' ? 'Logout' : 'Cerrar Sesión'}</span>
+                  <span>{currentLanguage === 'en' ? 'Logout' : 'लॉगआउट'}</span>
                 </button>
               </div>
             </div>
@@ -206,14 +206,14 @@ const Header = ({ userRole = null, userName = '', isAuthenticated = false }) => 
                   className="w-full flex items-center space-x-3 px-3 py-3 rounded-md text-left hover:bg-muted"
                 >
                   <Icon name="Settings" size={20} />
-                  <span className="font-medium">{currentLanguage === 'en' ? 'Settings' : 'Configuración'}</span>
+                  <span className="font-medium">{currentLanguage === 'en' ? 'Settings' : 'सेटिंग्स'}</span>
                 </button>
                 <button
                   onClick={handleLogout}
                   className="w-full flex items-center space-x-3 px-3 py-3 rounded-md text-left hover:bg-muted text-error"
                 >
                   <Icon name="LogOut" size={20} />
-                  <span className="font-medium">{currentLanguage === 'en' ? 'Logout' : 'Cerrar Sesión'}</span>
+                  <span className="font-medium">{currentLanguage === 'en' ? 'Logout' : 'लॉगआउट'}</span>
                 </button>
               </>
             )}

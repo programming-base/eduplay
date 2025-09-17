@@ -21,8 +21,8 @@ const AchievementPreview = ({ subjectName, completedChapters, totalChapters }) =
   const achievements = [
     {
       id: 'first_chapter',
-      title: currentLanguage === 'en' ? 'First Steps' : 'Primeros Pasos',
-      description: currentLanguage === 'en' ? 'Complete your first chapter' : 'Completa tu primer capítulo',
+  title: currentLanguage === 'en' ? 'First Steps' : 'पहला कदम',
+  description: currentLanguage === 'en' ? 'Complete your first chapter' : 'अपना पहला अध्याय पूरा करें',
       icon: 'Play',
       requirement: 1,
       xpReward: 50,
@@ -30,8 +30,8 @@ const AchievementPreview = ({ subjectName, completedChapters, totalChapters }) =
     },
     {
       id: 'quarter_complete',
-      title: currentLanguage === 'en' ? 'Getting Started' : 'Comenzando',
-      description: currentLanguage === 'en' ? 'Complete 25% of chapters' : 'Completa el 25% de los capítulos',
+  title: currentLanguage === 'en' ? 'Getting Started' : 'शुरुआत',
+  description: currentLanguage === 'en' ? 'Complete 25% of chapters' : '25% अध्याय पूरे करें',
       icon: 'TrendingUp',
       requirement: Math.ceil(totalChapters * 0.25),
       xpReward: 100,
@@ -39,8 +39,8 @@ const AchievementPreview = ({ subjectName, completedChapters, totalChapters }) =
     },
     {
       id: 'half_complete',
-      title: currentLanguage === 'en' ? 'Halfway Hero' : 'Héroe a Medio Camino',
-      description: currentLanguage === 'en' ? 'Complete 50% of chapters' : 'Completa el 50% de los capítulos',
+  title: currentLanguage === 'en' ? 'Halfway Hero' : 'आधा रास्ता हीरो',
+  description: currentLanguage === 'en' ? 'Complete 50% of chapters' : '50% अध्याय पूरे करें',
       icon: 'Award',
       requirement: Math.ceil(totalChapters * 0.5),
       xpReward: 200,
@@ -48,8 +48,8 @@ const AchievementPreview = ({ subjectName, completedChapters, totalChapters }) =
     },
     {
       id: 'three_quarter_complete',
-      title: currentLanguage === 'en' ? 'Almost There' : 'Casi Ahí',
-      description: currentLanguage === 'en' ? 'Complete 75% of chapters' : 'Completa el 75% de los capítulos',
+  title: currentLanguage === 'en' ? 'Almost There' : 'लगभग पहुँच गए',
+  description: currentLanguage === 'en' ? 'Complete 75% of chapters' : '75% अध्याय पूरे करें',
       icon: 'Target',
       requirement: Math.ceil(totalChapters * 0.75),
       xpReward: 300,
@@ -57,8 +57,8 @@ const AchievementPreview = ({ subjectName, completedChapters, totalChapters }) =
     },
     {
       id: 'subject_master',
-      title: currentLanguage === 'en' ? `${subjectName} Master` : `Maestro de ${subjectName}`,
-      description: currentLanguage === 'en' ? 'Complete all chapters' : 'Completa todos los capítulos',
+  title: currentLanguage === 'en' ? `${subjectName} Master` : `${subjectName} मास्टर`,
+  description: currentLanguage === 'en' ? 'Complete all chapters' : 'सभी अध्याय पूरे करें',
       icon: 'Crown',
       requirement: totalChapters,
       xpReward: 500,
@@ -66,8 +66,8 @@ const AchievementPreview = ({ subjectName, completedChapters, totalChapters }) =
     },
     {
       id: 'speed_learner',
-      title: currentLanguage === 'en' ? 'Speed Learner' : 'Aprendiz Rápido',
-      description: currentLanguage === 'en' ? 'Complete 3 chapters in one day' : 'Completa 3 capítulos en un día',
+  title: currentLanguage === 'en' ? 'Speed Learner' : 'तीव्र शिक्षार्थी',
+  description: currentLanguage === 'en' ? 'Complete 3 chapters in one day' : 'एक दिन में 3 अध्याय पूरे करें',
       icon: 'Zap',
       requirement: 3,
       xpReward: 150,
@@ -99,10 +99,10 @@ const AchievementPreview = ({ subjectName, completedChapters, totalChapters }) =
           </div>
           <div>
             <h3 className="text-lg font-semibold text-foreground">
-              {currentLanguage === 'en' ? 'Achievements' : 'Logros'}
+              {currentLanguage === 'en' ? 'Achievements' : 'उपलब्धियाँ'}
             </h3>
             <p className="text-sm text-muted-foreground">
-              {unlockedAchievements?.length}/{achievements?.length} {currentLanguage === 'en' ? 'unlocked' : 'desbloqueados'}
+              {unlockedAchievements?.length}/{achievements?.length} {currentLanguage === 'en' ? 'unlocked' : 'अनलॉक किए गए'}
             </p>
           </div>
         </div>
@@ -116,8 +116,8 @@ const AchievementPreview = ({ subjectName, completedChapters, totalChapters }) =
           iconSize={16}
         >
           {isExpanded 
-            ? (currentLanguage === 'en' ? 'Show Less' : 'Mostrar Menos')
-            : (currentLanguage === 'en' ? 'View All' : 'Ver Todos')
+            ? (currentLanguage === 'en' ? 'Show Less' : 'कम दिखाएँ')
+            : (currentLanguage === 'en' ? 'View All' : 'सभी देखें')
           }
         </Button>
       </div>
@@ -125,7 +125,7 @@ const AchievementPreview = ({ subjectName, completedChapters, totalChapters }) =
       <div className="mb-4">
         <div className="flex items-center justify-between mb-2">
           <span className="text-sm font-medium text-foreground">
-            {currentLanguage === 'en' ? 'Achievement Progress' : 'Progreso de Logros'}
+            {currentLanguage === 'en' ? 'Achievement Progress' : 'उपलब्धि प्रगति'}
           </span>
           <span className="text-sm text-muted-foreground">
             {Math.round((unlockedAchievements?.length / achievements?.length) * 100)}%
@@ -185,7 +185,7 @@ const AchievementPreview = ({ subjectName, completedChapters, totalChapters }) =
               </div>
               <div>
                 <div className="text-sm font-medium text-foreground">
-                  {currentLanguage === 'en' ? 'Next Achievement' : 'Próximo Logro'}
+                  {currentLanguage === 'en' ? 'Next Achievement' : 'अगली उपलब्धि'}
                 </div>
                 <div className="text-xs text-muted-foreground">
                   {nextAchievement?.title}
@@ -221,7 +221,7 @@ const AchievementPreview = ({ subjectName, completedChapters, totalChapters }) =
         <div className="flex items-center space-x-2">
           <Icon name="Zap" size={16} className="text-yellow-500" />
           <span className="text-sm text-muted-foreground">
-            {currentLanguage === 'en' ? 'Achievement XP:' : 'XP de Logros:'}
+            {currentLanguage === 'en' ? 'Achievement XP:' : 'उपलब्धि XP:'}
           </span>
         </div>
         <div className="text-sm font-bold text-yellow-600">

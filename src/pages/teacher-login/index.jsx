@@ -50,10 +50,10 @@ const TeacherLogin = ({ login }) => {
             {/* Mobile Welcome Header */}
             <div className="lg:hidden text-center mb-8">
               <h1 className="text-2xl font-bold text-foreground mb-2">
-                {currentLanguage === 'en' ? 'Teacher Portal' : 'Portal de Maestros'}
+                {currentLanguage === 'en' ? 'Teacher Portal' : 'शिक्षक पोर्टल'}
               </h1>
               <p className="text-muted-foreground">
-                {currentLanguage === 'en' ?'Sign in to access your teaching dashboard' :'Inicia sesión para acceder a tu panel de enseñanza'}
+                {currentLanguage === 'en' ? 'Sign in to access your teaching dashboard' : 'अपने शिक्षण डैशबोर्ड तक पहुँचने के लिए साइन इन करें'}
               </p>
             </div>
 
@@ -75,14 +75,14 @@ const TeacherLogin = ({ login }) => {
         <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
             <div className="text-sm text-muted-foreground">
-              © {new Date()?.getFullYear()} EduPlay. {currentLanguage === 'en' ? 'All rights reserved.' : 'Todos los derechos reservados.'}
+              © {new Date()?.getFullYear()} EduPlay. {currentLanguage === 'en' ? 'All rights reserved.' : 'सभी अधिकार सुरक्षित।'}
             </div>
             <div className="flex items-center space-x-4">
               <span className="text-sm text-muted-foreground">
-                {currentLanguage === 'en' ? 'Need help?' : '¿Necesitas ayuda?'}
+                {currentLanguage === 'en' ? 'Need help?' : 'मदद चाहिए?'}
               </span>
               <button className="text-sm text-primary hover:text-primary/80 transition-colors duration-150">
-                {currentLanguage === 'en' ? 'Contact Support' : 'Contactar Soporte'}
+                {currentLanguage === 'en' ? 'Contact Support' : 'सहायता से संपर्क करें'}
               </button>
             </div>
           </div>

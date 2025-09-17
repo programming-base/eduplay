@@ -52,16 +52,16 @@ const QuickGamesSection = ({ games, className = '' }) => {
           </div>
           <div>
             <h3 className="text-lg font-bold text-foreground">
-              {currentLanguage === 'en' ? 'Quick Games' : 'Juegos Rápidos'}
+              {currentLanguage === 'en' ? 'Quick Games' : 'त्वरित खेल'}
             </h3>
             <p className="text-sm text-muted-foreground">
-              {currentLanguage === 'en' ? 'Fun learning activities' : 'Actividades de aprendizaje divertidas'}
+              {currentLanguage === 'en' ? 'Fun learning activities' : 'मज़ेदार सीखने की गतिविधियाँ'}
             </p>
           </div>
         </div>
 
         <Button variant="outline" size="sm" iconName="Plus" iconPosition="left" iconSize={16}>
-          {currentLanguage === 'en' ? 'View All' : 'Ver Todos'}
+          {currentLanguage === 'en' ? 'View All' : 'सभी देखें'}
         </Button>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -80,7 +80,7 @@ const QuickGamesSection = ({ games, className = '' }) => {
                 
                 {game?.isNew && (
                   <span className="px-2 py-1 bg-error text-white text-xs font-medium rounded-full">
-                    {currentLanguage === 'en' ? 'New' : 'Nuevo'}
+                    {currentLanguage === 'en' ? 'New' : 'नया'}
                   </span>
                 )}
               </div>
@@ -110,8 +110,8 @@ const QuickGamesSection = ({ games, className = '' }) => {
 
                 <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(game?.difficulty)}`}>
                   {currentLanguage === 'en' ? game?.difficulty : 
-                    game?.difficulty === 'Easy' ? 'Fácil' :
-                    game?.difficulty === 'Medium' ? 'Medio' : 'Difícil'}
+                    game?.difficulty === 'Easy' ? 'आसान' :
+                    game?.difficulty === 'Medium' ? 'मध्यम' : 'कठिन'}
                 </span>
               </div>
 
@@ -120,7 +120,7 @@ const QuickGamesSection = ({ games, className = '' }) => {
                 <div className="mb-3">
                   <div className="flex justify-between items-center mb-1">
                     <span className="text-xs text-muted-foreground">
-                      {currentLanguage === 'en' ? 'Best Score' : 'Mejor Puntuación'}
+                      {currentLanguage === 'en' ? 'Best Score' : 'सर्वश्रेष्ठ स्कोर'}
                     </span>
                     <span className="text-xs font-medium text-foreground">{game?.bestScore}%</span>
                   </div>
@@ -144,8 +144,8 @@ const QuickGamesSection = ({ games, className = '' }) => {
                 className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
               >
                 {game?.bestScore !== undefined 
-                  ? (currentLanguage === 'en' ? 'Play Again' : 'Jugar de Nuevo')
-                  : (currentLanguage === 'en' ? 'Play Now' : 'Jugar Ahora')
+                  ? (currentLanguage === 'en' ? 'Play Again' : 'फिर से खेलें')
+                  : (currentLanguage === 'en' ? 'Play Now' : 'अभी खेलें')
                 }
               </Button>
             </div>
@@ -161,10 +161,10 @@ const QuickGamesSection = ({ games, className = '' }) => {
             </div>
             <div>
               <h4 className="font-semibold text-foreground">
-                {currentLanguage === 'en' ? 'Daily Challenge' : 'Desafío Diario'}
+                {currentLanguage === 'en' ? 'Daily Challenge' : 'दैनिक चुनौती'}
               </h4>
               <p className="text-sm text-muted-foreground">
-                {currentLanguage === 'en' ? 'Complete today\'s challenge for bonus XP!' : '¡Completa el desafío de hoy para XP extra!'}
+                {currentLanguage === 'en' ? 'Complete today\'s challenge for bonus XP!' : 'आज की चुनौती पूरी करें और बोनस XP पाएं!'}
               </p>
             </div>
           </div>
@@ -173,11 +173,11 @@ const QuickGamesSection = ({ games, className = '' }) => {
             <div className="text-right">
               <p className="text-sm font-bold text-primary">+500 XP</p>
               <p className="text-xs text-muted-foreground">
-                {currentLanguage === 'en' ? 'Bonus reward' : 'Recompensa extra'}
+                {currentLanguage === 'en' ? 'Bonus reward' : 'बोनस पुरस्कार'}
               </p>
             </div>
             <Button variant="default" size="sm" iconName="ArrowRight" iconPosition="right" iconSize={16}>
-              {currentLanguage === 'en' ? 'Start' : 'Comenzar'}
+              {currentLanguage === 'en' ? 'Start' : 'शुरू करें'}
             </Button>
           </div>
         </div>

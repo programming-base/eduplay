@@ -17,48 +17,48 @@ const BadgeAwardingSystem = ({ onAwardBadge, onCreateCustomBadge }) => {
   const availableBadges = [
     {
       id: 'math-master',
-      name: currentLanguage === 'en' ? 'Math Master' : 'Maestro de Matemáticas',
-      description: currentLanguage === 'en' ? 'Excellent performance in mathematics' : 'Excelente rendimiento en matemáticas',
+  name: currentLanguage === 'en' ? 'Math Master' : 'गणित मास्टर',
+  description: currentLanguage === 'en' ? 'Excellent performance in mathematics' : 'गणित में उत्कृष्ट प्रदर्शन',
       icon: 'Calculator',
       color: 'text-primary bg-primary/10',
       rarity: 'common'
     },
     {
       id: 'streak-champion',
-      name: currentLanguage === 'en' ? 'Streak Champion' : 'Campeón de Racha',
-      description: currentLanguage === 'en' ? '30-day learning streak' : 'Racha de aprendizaje de 30 días',
+  name: currentLanguage === 'en' ? 'Streak Champion' : 'स्ट्रिक चैंपियन',
+  description: currentLanguage === 'en' ? '30-day learning streak' : '30-दिन की सीखने की स्ट्रिक',
       icon: 'Flame',
       color: 'text-accent bg-accent/10',
       rarity: 'rare'
     },
     {
       id: 'quiz-master',
-      name: currentLanguage === 'en' ? 'Quiz Master' : 'Maestro de Quiz',
-      description: currentLanguage === 'en' ? 'Perfect scores on 5 consecutive quizzes' : 'Puntuaciones perfectas en 5 cuestionarios consecutivos',
+  name: currentLanguage === 'en' ? 'Quiz Master' : 'क्विज मास्टर',
+  description: currentLanguage === 'en' ? 'Perfect scores on 5 consecutive quizzes' : '5 लगातार क्विज़ में पूर्ण अंक',
       icon: 'Trophy',
       color: 'text-success bg-success/10',
       rarity: 'epic'
     },
     {
       id: 'helpful-peer',
-      name: currentLanguage === 'en' ? 'Helpful Peer' : 'Compañero Útil',
-      description: currentLanguage === 'en' ? 'Helped classmates with learning' : 'Ayudó a compañeros de clase con el aprendizaje',
+  name: currentLanguage === 'en' ? 'Helpful Peer' : 'सहायक साथी',
+  description: currentLanguage === 'en' ? 'Helped classmates with learning' : 'सहपाठियों की मदद की',
       icon: 'Heart',
       color: 'text-secondary bg-secondary/10',
       rarity: 'common'
     },
     {
       id: 'creative-thinker',
-      name: currentLanguage === 'en' ? 'Creative Thinker' : 'Pensador Creativo',
-      description: currentLanguage === 'en' ? 'Innovative problem-solving approach' : 'Enfoque innovador para resolver problemas',
+  name: currentLanguage === 'en' ? 'Creative Thinker' : 'रचनात्मक विचारक',
+  description: currentLanguage === 'en' ? 'Innovative problem-solving approach' : 'नवोन्मेषी समस्या समाधान दृष्टिकोण',
       icon: 'Lightbulb',
       color: 'text-warning bg-warning/10',
       rarity: 'rare'
     },
     {
       id: 'early-bird',
-      name: currentLanguage === 'en' ? 'Early Bird' : 'Madrugador',
-      description: currentLanguage === 'en' ? 'Consistently completes assignments early' : 'Completa consistentemente las tareas temprano',
+  name: currentLanguage === 'en' ? 'Early Bird' : 'जल्दी उठने वाला',
+  description: currentLanguage === 'en' ? 'Consistently completes assignments early' : 'नियमित रूप से असाइनमेंट जल्दी पूरा करता है',
       icon: 'Sun',
       color: 'text-accent bg-accent/10',
       rarity: 'common'
@@ -77,23 +77,23 @@ const BadgeAwardingSystem = ({ onAwardBadge, onCreateCustomBadge }) => {
     {
       id: 1,
       studentName: "Emma Rodriguez",
-      badgeName: currentLanguage === 'en' ? 'Math Master' : 'Maestro de Matemáticas',
+  badgeName: currentLanguage === 'en' ? 'Math Master' : 'गणित मास्टर',
       awardedDate: "2025-01-14",
-      message: currentLanguage === 'en' ? 'Outstanding performance in algebra!' : '¡Rendimiento excepcional en álgebra!'
+  message: currentLanguage === 'en' ? 'Outstanding performance in algebra!' : 'बीजगणित में उत्कृष्ट प्रदर्शन!'
     },
     {
       id: 2,
       studentName: "Sophia Chen",
-      badgeName: currentLanguage === 'en' ? 'Streak Champion' : 'Campeón de Racha',
+  badgeName: currentLanguage === 'en' ? 'Streak Champion' : 'स्ट्रिक चैंपियन',
       awardedDate: "2025-01-13",
-      message: currentLanguage === 'en' ? 'Amazing 30-day learning streak!' : '¡Increíble racha de aprendizaje de 30 días!'
+  message: currentLanguage === 'en' ? 'Amazing 30-day learning streak!' : 'अद्भुत 30-दिन की सीखने की स्ट्रिक!'
     },
     {
       id: 3,
       studentName: "Marcus Johnson",
-      badgeName: currentLanguage === 'en' ? 'Helpful Peer' : 'Compañero Útil',
+  badgeName: currentLanguage === 'en' ? 'Helpful Peer' : 'सहायक साथी',
       awardedDate: "2025-01-12",
-      message: currentLanguage === 'en' ? 'Great teamwork and helping others!' : '¡Excelente trabajo en equipo y ayuda a otros!'
+  message: currentLanguage === 'en' ? 'Great teamwork and helping others!' : 'शानदार टीमवर्क और दूसरों की मदद!' 
     }
   ];
 
@@ -132,10 +132,10 @@ const BadgeAwardingSystem = ({ onAwardBadge, onCreateCustomBadge }) => {
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-xl font-semibold text-foreground mb-1">
-            {currentLanguage === 'en' ? 'Badge Awarding System' : 'Sistema de Otorgamiento de Insignias'}
+            {currentLanguage === 'en' ? 'Badge Awarding System' : 'बैज पुरस्कार प्रणाली'}
           </h2>
           <p className="text-sm text-muted-foreground">
-            {currentLanguage === 'en' ? 'Recognize and motivate student achievements' : 'Reconocer y motivar los logros de los estudiantes'}
+            {currentLanguage === 'en' ? 'Recognize and motivate student achievements' : 'छात्र उपलब्धियों को पहचानें और प्रेरित करें'}
           </p>
         </div>
         <Button
@@ -146,7 +146,7 @@ const BadgeAwardingSystem = ({ onAwardBadge, onCreateCustomBadge }) => {
           iconPosition="left"
           iconSize={16}
         >
-          {currentLanguage === 'en' ? 'Create Badge' : 'Crear Insignia'}
+          {currentLanguage === 'en' ? 'Create Badge' : 'बैज बनाएं'}
         </Button>
       </div>
       {/* Award Badge Form */}
@@ -154,14 +154,14 @@ const BadgeAwardingSystem = ({ onAwardBadge, onCreateCustomBadge }) => {
         <div className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-foreground mb-2">
-              {currentLanguage === 'en' ? 'Select Student' : 'Seleccionar Estudiante'}
+              {currentLanguage === 'en' ? 'Select Student' : 'छात्र चुनें'}
             </label>
             <select
               value={selectedStudent}
               onChange={(e) => setSelectedStudent(e?.target?.value)}
               className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground"
             >
-              <option value="">{currentLanguage === 'en' ? 'Choose a student...' : 'Elegir un estudiante...'}</option>
+              <option value="">{currentLanguage === 'en' ? 'Choose a student...' : 'एक छात्र चुनें...'}</option>
               {students?.map((student) => (
                 <option key={student?.id} value={student?.id}>
                   {student?.name} - {student?.class}
@@ -172,14 +172,14 @@ const BadgeAwardingSystem = ({ onAwardBadge, onCreateCustomBadge }) => {
 
           <div>
             <label className="block text-sm font-medium text-foreground mb-2">
-              {currentLanguage === 'en' ? 'Select Badge' : 'Seleccionar Insignia'}
+              {currentLanguage === 'en' ? 'Select Badge' : 'बैज चुनें'}
             </label>
             <select
               value={selectedBadge}
               onChange={(e) => setSelectedBadge(e?.target?.value)}
               className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground"
             >
-              <option value="">{currentLanguage === 'en' ? 'Choose a badge...' : 'Elegir una insignia...'}</option>
+              <option value="">{currentLanguage === 'en' ? 'Choose a badge...' : 'एक बैज चुनें...'}</option>
               {availableBadges?.map((badge) => (
                 <option key={badge?.id} value={badge?.id}>
                   {badge?.name} ({badge?.rarity})
@@ -190,12 +190,12 @@ const BadgeAwardingSystem = ({ onAwardBadge, onCreateCustomBadge }) => {
 
           <div>
             <label className="block text-sm font-medium text-foreground mb-2">
-              {currentLanguage === 'en' ? 'Custom Message (Optional)' : 'Mensaje Personalizado (Opcional)'}
+              {currentLanguage === 'en' ? 'Custom Message (Optional)' : 'कस्टम संदेश (वैकल्पिक)'}
             </label>
             <textarea
               value={customMessage}
               onChange={(e) => setCustomMessage(e?.target?.value)}
-              placeholder={currentLanguage === 'en' ? 'Add a personal message...' : 'Agregar un mensaje personal...'}
+              placeholder={currentLanguage === 'en' ? 'Add a personal message...' : 'एक व्यक्तिगत संदेश जोड़ें...'}
               className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground resize-none"
               rows={3}
             />
@@ -210,14 +210,14 @@ const BadgeAwardingSystem = ({ onAwardBadge, onCreateCustomBadge }) => {
             iconSize={16}
             className="w-full"
           >
-            {currentLanguage === 'en' ? 'Award Badge' : 'Otorgar Insignia'}
+            {currentLanguage === 'en' ? 'Award Badge' : 'बैज प्रदान करें'}
           </Button>
         </div>
 
         {/* Badge Preview */}
         <div className="space-y-4">
           <h3 className="text-lg font-medium text-foreground">
-            {currentLanguage === 'en' ? 'Badge Preview' : 'Vista Previa de Insignia'}
+            {currentLanguage === 'en' ? 'Badge Preview' : 'बैज पूर्वावलोकन'}
           </h3>
           {selectedBadge ? (
             <div className="p-4 border border-border rounded-lg bg-muted/50">
@@ -241,7 +241,7 @@ const BadgeAwardingSystem = ({ onAwardBadge, onCreateCustomBadge }) => {
             <div className="p-8 border border-dashed border-border rounded-lg text-center">
               <Icon name="Award" size={48} className="text-muted-foreground mx-auto mb-3" />
               <p className="text-muted-foreground">
-                {currentLanguage === 'en' ? 'Select a badge to see preview' : 'Selecciona una insignia para ver la vista previa'}
+                {currentLanguage === 'en' ? 'Select a badge to see preview' : 'पूर्वावलोकन देखने के लिए एक बैज चुनें'}
               </p>
             </div>
           )}
@@ -250,7 +250,7 @@ const BadgeAwardingSystem = ({ onAwardBadge, onCreateCustomBadge }) => {
       {/* Available Badges Grid */}
       <div className="mb-6">
         <h3 className="text-lg font-medium text-foreground mb-4">
-          {currentLanguage === 'en' ? 'Available Badges' : 'Insignias Disponibles'}
+          {currentLanguage === 'en' ? 'Available Badges' : 'उपलब्ध बैज'}
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {availableBadges?.map((badge) => (
@@ -280,7 +280,7 @@ const BadgeAwardingSystem = ({ onAwardBadge, onCreateCustomBadge }) => {
       {/* Recent Awards */}
       <div>
         <h3 className="text-lg font-medium text-foreground mb-4">
-          {currentLanguage === 'en' ? 'Recent Awards' : 'Premios Recientes'}
+          {currentLanguage === 'en' ? 'Recent Awards' : 'हाल के पुरस्कार'}
         </h3>
         <div className="space-y-3">
           {recentAwards?.map((award) => (
@@ -292,7 +292,7 @@ const BadgeAwardingSystem = ({ onAwardBadge, onCreateCustomBadge }) => {
                 <div>
                   <h4 className="font-medium text-foreground">{award?.studentName}</h4>
                   <p className="text-sm text-muted-foreground">
-                    {currentLanguage === 'en' ? 'Awarded' : 'Otorgado'} "{award?.badgeName}" • {award?.awardedDate}
+                    {currentLanguage === 'en' ? 'Awarded' : 'प्रदान किया गया'} "{award?.badgeName}" • {award?.awardedDate}
                   </p>
                   {award?.message && (
                     <p className="text-xs text-muted-foreground italic">"{award?.message}"</p>

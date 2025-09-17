@@ -12,8 +12,8 @@ const LanguageSwitcher = ({ className = '', size = 'sm', variant = 'ghost' }) =>
   }, []);
 
   const languages = [
-    { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'es', name: 'Español', flag: '🇪🇸' }
+    { code: 'en', name: 'English', flag: 'US' },
+    { code: 'hi', name: 'हिन्दी', flag: 'IN' }
   ];
 
   const handleLanguageChange = (languageCode) => {
@@ -82,6 +82,6 @@ const LanguageSwitcher = ({ className = '', size = 'sm', variant = 'ghost' }) =>
       )}
     </div>
   );
-};
+};  
 
 export default LanguageSwitcher;

@@ -45,10 +45,10 @@ const AchievementGallery = ({ achievements, className = '' }) => {
           </div>
           <div>
             <h3 className="text-lg font-bold text-foreground">
-              {currentLanguage === 'en' ? 'Achievement Gallery' : 'Galería de Logros'}
+              {currentLanguage === 'en' ? 'Achievement Gallery' : 'उपलब्धि गैलरी'}
             </h3>
             <p className="text-sm text-muted-foreground">
-              {achievements?.filter(a => a?.earned)?.length}/{achievements?.length} {currentLanguage === 'en' ? 'unlocked' : 'desbloqueados'}
+              {achievements?.filter(a => a?.earned)?.length}/{achievements?.length} {currentLanguage === 'en' ? 'unlocked' : 'अनलॉक किए गए'}
             </p>
           </div>
         </div>
@@ -56,7 +56,7 @@ const AchievementGallery = ({ achievements, className = '' }) => {
       {/* Recent Achievements */}
       <div className="mb-6">
         <h4 className="text-sm font-semibold text-foreground mb-3">
-          {currentLanguage === 'en' ? 'Recently Earned' : 'Ganados Recientemente'}
+          {currentLanguage === 'en' ? 'Recently Earned' : 'हाल ही में प्राप्त'}
         </h4>
         <div className="flex space-x-3 overflow-x-auto pb-2">
           {achievements?.filter(achievement => achievement?.earned && achievement?.isRecent)?.slice(0, 5)?.map((achievement) => (
@@ -74,7 +74,7 @@ const AchievementGallery = ({ achievements, className = '' }) => {
       {/* All Achievements Grid */}
       <div>
         <h4 className="text-sm font-semibold text-foreground mb-3">
-          {currentLanguage === 'en' ? 'All Achievements' : 'Todos los Logros'}
+          {currentLanguage === 'en' ? 'All Achievements' : 'सभी उपलब्धियाँ'}
         </h4>
         <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-3">
           {achievements?.map((achievement) => (
@@ -103,7 +103,7 @@ const AchievementGallery = ({ achievements, className = '' }) => {
       <div className="mt-6 pt-4 border-t border-border">
         <div className="flex items-center justify-between mb-2">
           <span className="text-sm font-medium text-foreground">
-            {currentLanguage === 'en' ? 'Collection Progress' : 'Progreso de Colección'}
+            {currentLanguage === 'en' ? 'Collection Progress' : 'संग्रह प्रगति'}
           </span>
           <span className="text-sm font-bold text-primary">
             {Math.round((achievements?.filter(a => a?.earned)?.length / achievements?.length) * 100)}%

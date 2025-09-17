@@ -40,40 +40,40 @@ const ChapterGrid = ({
     if (searchQuery) {
       return {
         icon: 'Search',
-        title: currentLanguage === 'en' ? 'No chapters found' : 'No se encontraron capítulos',
+        title: currentLanguage === 'en' ? 'No chapters found' : 'कोई अध्याय नहीं मिला',
         description: currentLanguage === 'en' 
           ? `No chapters match your search for "${searchQuery}"`
-          : `No hay capítulos que coincidan con tu búsqueda de "${searchQuery}"`
+          : `आपकी खोज के लिए कोई अध्याय नहीं मिला "${searchQuery}"`
       };
     }
 
     const messages = {
       'available': {
         icon: 'Play',
-        title: currentLanguage === 'en' ? 'No available chapters' : 'No hay capítulos disponibles',
-        description: currentLanguage === 'en' ?'Complete prerequisite chapters to unlock more content' :'Completa los capítulos prerrequisito para desbloquear más contenido'
+        title: currentLanguage === 'en' ? 'No available chapters' : 'कोई उपलब्ध अध्याय नहीं',
+        description: currentLanguage === 'en' ? 'Complete prerequisite chapters to unlock more content' : 'अधिक सामग्री अनलॉक करने के लिए आवश्यक अध्याय पूरे करें'
       },
       'in-progress': {
         icon: 'Clock',
-        title: currentLanguage === 'en' ? 'No chapters in progress' : 'No hay capítulos en progreso',
-        description: currentLanguage === 'en' ?'Start a new chapter to see it here' :'Comienza un nuevo capítulo para verlo aquí'
+        title: currentLanguage === 'en' ? 'No chapters in progress' : 'कोई अध्याय प्रगति में नहीं',
+        description: currentLanguage === 'en' ? 'Start a new chapter to see it here' : 'यहाँ देखने के लिए नया अध्याय शुरू करें'
       },
       'completed': {
         icon: 'CheckCircle',
-        title: currentLanguage === 'en' ? 'No completed chapters' : 'No hay capítulos completados',
-        description: currentLanguage === 'en' ?'Complete chapters to see your achievements' :'Completa capítulos para ver tus logros'
+        title: currentLanguage === 'en' ? 'No completed chapters' : 'कोई पूर्ण अध्याय नहीं',
+        description: currentLanguage === 'en' ? 'Complete chapters to see your achievements' : 'अपनी उपलब्धियाँ देखने के लिए अध्याय पूरे करें'
       },
       'locked': {
         icon: 'Lock',
-        title: currentLanguage === 'en' ? 'No locked chapters' : 'No hay capítulos bloqueados',
-        description: currentLanguage === 'en' ?'All chapters are available for you to start' :'Todos los capítulos están disponibles para comenzar'
+        title: currentLanguage === 'en' ? 'No locked chapters' : 'कोई लॉक किए गए अध्याय नहीं',
+        description: currentLanguage === 'en' ? 'All chapters are available for you to start' : 'सभी अध्याय आपके लिए शुरू करने के लिए उपलब्ध हैं'
       }
     };
 
     return messages?.[activeFilter] || {
-      icon: 'BookOpen',
-      title: currentLanguage === 'en' ? 'No chapters available' : 'No hay capítulos disponibles',
-      description: currentLanguage === 'en' ?'Check back later for new content' :'Vuelve más tarde para ver nuevo contenido'
+  icon: 'BookOpen',
+  title: currentLanguage === 'en' ? 'No chapters available' : 'कोई अध्याय उपलब्ध नहीं',
+  description: currentLanguage === 'en' ? 'Check back later for new content' : 'नई सामग्री के लिए बाद में देखें'
     };
   };
 
@@ -102,7 +102,7 @@ const ChapterGrid = ({
         <div className="text-sm text-muted-foreground">
           {currentLanguage === 'en' 
             ? `Showing ${filteredChapters?.length} of ${chapters?.length} chapters`
-            : `Mostrando ${filteredChapters?.length} de ${chapters?.length} capítulos`
+            : `${filteredChapters?.length} में से ${chapters?.length} अध्याय दिखा रहे हैं`
           }
         </div>
         
@@ -110,7 +110,7 @@ const ChapterGrid = ({
           <div className="flex items-center space-x-2 text-sm text-primary bg-primary/10 px-3 py-1 rounded-full">
             <Icon name="RotateCcw" size={16} />
             <span>
-              {currentLanguage === 'en' ? 'Practice Mode Active' : 'Modo Práctica Activo'}
+              {currentLanguage === 'en' ? 'Practice Mode Active' : 'अभ्यास मोड सक्रिय'}
             </span>
           </div>
         )}
@@ -133,7 +133,7 @@ const ChapterGrid = ({
           <h3 className="font-semibold text-foreground mb-4 flex items-center space-x-2">
             <Icon name="Route" size={20} />
             <span>
-              {currentLanguage === 'en' ? 'Learning Path' : 'Ruta de Aprendizaje'}
+              {currentLanguage === 'en' ? 'Learning Path' : 'अधिगम पथ'}
             </span>
           </h3>
           
@@ -183,7 +183,7 @@ const ChapterGrid = ({
                 <span className="text-sm text-muted-foreground">
                   {currentLanguage === 'en' 
                     ? `+${chapters?.length - 5} more chapters`
-                    : `+${chapters?.length - 5} capítulos más`
+                    : `+${chapters?.length - 5} और अध्याय`
                   }
                 </span>
               </div>

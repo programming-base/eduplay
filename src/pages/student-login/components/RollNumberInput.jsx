@@ -185,7 +185,7 @@ const RollNumberInput = ({ selectedClass, onLogin, onBack, currentLanguage }) =>
             disabled={rollNumber?.length < 3}
           >
             {isLoading 
-              ? (currentLanguage === 'en' ? 'Logging in...' : 'Iniciando sesión...') 
+              ? (currentLanguage === 'en' ? 'Logging in...' : 'लॉग इन हो रहा है...') 
               : (currentLanguage === 'en' ? 'Login to Dashboard' : 'Iniciar Sesión al Panel')}
           </Button>
         </form>

@@ -48,7 +48,7 @@ const StudentDashboard = () => {
     {
       id: 'math',
       name: 'Mathematics',
-      nameEs: 'Matemáticas',
+  nameEs: 'गणित',
       icon: 'Calculator',
       bgColor: 'bg-gradient-to-r from-blue-500 to-indigo-500',
       progress: 75,
@@ -67,7 +67,7 @@ const StudentDashboard = () => {
     {
       id: 'science',
       name: 'Science',
-      nameEs: 'Ciencias',
+  nameEs: 'विज्ञान',
       icon: 'Atom',
       bgColor: 'bg-gradient-to-r from-green-500 to-emerald-500',
       progress: 60,
@@ -85,7 +85,7 @@ const StudentDashboard = () => {
     {
       id: 'english',
       name: 'English',
-      nameEs: 'Inglés',
+  nameEs: 'अंग्रेज़ी',
       icon: 'BookOpen',
       bgColor: 'bg-gradient-to-r from-purple-500 to-pink-500',
       progress: 85,
@@ -104,7 +104,7 @@ const StudentDashboard = () => {
     {
       id: 'history',
       name: 'History',
-      nameEs: 'Historia',
+  nameEs: 'इतिहास',
       icon: 'Scroll',
       bgColor: 'bg-gradient-to-r from-amber-500 to-orange-500',
       progress: 45,
@@ -121,7 +121,7 @@ const StudentDashboard = () => {
     {
       id: 'geography',
       name: 'Geography',
-      nameEs: 'Geografía',
+  nameEs: 'भूगोल',
       icon: 'Globe',
       bgColor: 'bg-gradient-to-r from-teal-500 to-cyan-500',
       progress: 30,
@@ -138,7 +138,7 @@ const StudentDashboard = () => {
     {
       id: 'art',
       name: 'Art & Craft',
-      nameEs: 'Arte y Manualidades',
+  nameEs: 'कला और शिल्प',
       icon: 'Palette',
       bgColor: 'bg-gradient-to-r from-rose-500 to-pink-500',
       progress: 90,
@@ -161,9 +161,8 @@ const StudentDashboard = () => {
     {
       id: 'first_login',
       name: 'Welcome Aboard',
-      nameEs: 'Bienvenido a Bordo',
-      description: 'Complete your first login',
-      descriptionEs: 'Completa tu primer inicio de sesión',
+        nameEs: 'स्वागत है',
+        descriptionEs: 'अपना पहला लॉगिन पूरा करें',
       icon: 'LogIn',
       type: 'bronze',
       earned: true,
@@ -173,9 +172,8 @@ const StudentDashboard = () => {
     {
       id: 'streak_7',
       name: 'Week Warrior',
-      nameEs: 'Guerrero de la Semana',
-      description: 'Maintain a 7-day learning streak',
-      descriptionEs: 'Mantén una racha de aprendizaje de 7 días',
+        nameEs: 'सप्ताह योद्धा',
+        descriptionEs: '7 दिन की सीखने की स्ट्रीक बनाए रखें',
       icon: 'Flame',
       type: 'gold',
       earned: true,
@@ -185,9 +183,8 @@ const StudentDashboard = () => {
     {
       id: 'math_master',
       name: 'Math Master',
-      nameEs: 'Maestro de Matemáticas',
-      description: 'Complete all math chapters with 90%+ score',
-      descriptionEs: 'Completa todos los capítulos de matemáticas con 90%+ de puntuación',
+        nameEs: 'गणित मास्टर',
+        descriptionEs: 'सभी गणित अध्याय 90%+ अंक के साथ पूरे करें',
       icon: 'Calculator',
       type: 'diamond',
       earned: false,
@@ -197,9 +194,8 @@ const StudentDashboard = () => {
     {
       id: 'quiz_champion',
       name: 'Quiz Champion',
-      nameEs: 'Campeón de Cuestionarios',
-      description: 'Score perfect in 10 quizzes',
-      descriptionEs: 'Obtén puntuación perfecta en 10 cuestionarios',
+        nameEs: 'क्विज़ चैंपियन',
+        descriptionEs: '10 क्विज़ में पूर्ण अंक प्राप्त करें',
       icon: 'Trophy',
       type: 'gold',
       earned: true,
@@ -209,9 +205,8 @@ const StudentDashboard = () => {
     {
       id: 'early_bird',
       name: 'Early Bird',
-      nameEs: 'Madrugador',
-      description: 'Study before 8 AM for 5 days',
-      descriptionEs: 'Estudia antes de las 8 AM durante 5 días',
+        nameEs: 'अर्ली बर्ड',
+        descriptionEs: '5 दिनों तक सुबह 8 बजे से पहले पढ़ाई करें',
       icon: 'Sunrise',
       type: 'silver',
       earned: true,
@@ -221,9 +216,8 @@ const StudentDashboard = () => {
     {
       id: 'social_learner',
       name: 'Social Learner',
-      nameEs: 'Aprendiz Social',
-      description: 'Help 5 classmates with their studies',
-      descriptionEs: 'Ayuda a 5 compañeros de clase con sus estudios',
+        nameEs: 'सामाजिक शिक्षार्थी',
+        descriptionEs: '5 सहपाठियों की पढ़ाई में मदद करें',
       icon: 'Users',
       type: 'silver',
       earned: false,
@@ -249,9 +243,9 @@ const StudentDashboard = () => {
       id: 'rec_1',
       type: 'practice',
       title: 'Practice Algebra Basics',
-      titleEs: 'Practica Fundamentos de Álgebra',
+          titleEs: 'बीजगणित की मूल बातें अभ्यास करें',
       description: 'You struggled with quadratic equations. Let\'s practice more!',
-      descriptionEs: 'Tuviste dificultades con las ecuaciones cuadráticas. ¡Practiquemos más!',
+          descriptionEs: 'आपको द्विघात समीकरणों में कठिनाई हुई। चलिए और अभ्यास करें!',
       subject: 'Mathematics',
       priority: 'high',
       estimatedTime: 15,
@@ -262,9 +256,9 @@ const StudentDashboard = () => {
       id: 'rec_2',
       type: 'review',
       title: 'Review Cell Structure',
-      titleEs: 'Revisar Estructura Celular',
+          titleEs: 'कोशिका संरचना की समीक्षा करें',
       description: 'Refresh your knowledge on plant and animal cells',
-      descriptionEs: 'Refresca tu conocimiento sobre células vegetales y animales',
+          descriptionEs: 'पौधों और जानवरों की कोशिकाओं का ज्ञान ताज़ा करें',
       subject: 'Science',
       priority: 'medium',
       estimatedTime: 10,
@@ -275,9 +269,9 @@ const StudentDashboard = () => {
       id: 'rec_3',
       type: 'challenge',
       title: 'Grammar Challenge',
-      titleEs: 'Desafío de Gramática',
+          titleEs: 'व्याकरण चुनौती',
       description: 'Test your understanding of complex sentence structures',
-      descriptionEs: 'Pon a prueba tu comprensión de estructuras de oraciones complejas',
+          descriptionEs: 'जटिल वाक्य संरचनाओं की अपनी समझ का परीक्षण करें',
       subject: 'English',
       priority: 'low',
       estimatedTime: 20,
@@ -288,9 +282,9 @@ const StudentDashboard = () => {
       id: 'rec_4',
       type: 'game',
       title: 'Geography Quiz Game',
-      titleEs: 'Juego de Cuestionario de Geografía',
+          titleEs: 'भूगोल क्विज़ गेम',
       description: 'Fun interactive game to learn world capitals',
-      descriptionEs: 'Juego interactivo divertido para aprender capitales del mundo',
+          descriptionEs: 'दुनिया की राजधानियों को सीखने के लिए मज़ेदार इंटरैक्टिव गेम',
       subject: 'Geography',
       gameType: 'quiz',
       priority: 'medium',
@@ -324,9 +318,9 @@ const StudentDashboard = () => {
       id: 'game_1',
       type: 'aptitude',
       title: 'Logic Puzzles',
-      titleEs: 'Rompecabezas Lógicos',
+          titleEs: 'तार्किक पहेलियाँ',
       description: 'Solve challenging logic problems to boost your reasoning skills',
-      descriptionEs: 'Resuelve problemas de lógica desafiantes para mejorar tus habilidades de razonamiento',
+          descriptionEs: 'अपनी तर्क क्षमता बढ़ाने के लिए चुनौतीपूर्ण पहेलियाँ हल करें',
       icon: 'Brain',
       duration: 10,
       xpReward: 200,
@@ -338,9 +332,9 @@ const StudentDashboard = () => {
       id: 'game_2',
       type: 'vocabulary',
       title: 'Word Builder',
-      titleEs: 'Constructor de Palabras',
+          titleEs: 'शब्द निर्माता',
       description: 'Build words from letters and expand your vocabulary',
-      descriptionEs: 'Construye palabras a partir de letras y amplía tu vocabulario',
+          descriptionEs: 'अक्षरों से शब्द बनाएं और अपना शब्दकोश बढ़ाएं',
       icon: 'Type',
       duration: 8,
       xpReward: 150,
@@ -352,9 +346,9 @@ const StudentDashboard = () => {
       id: 'game_3',
       type: 'math',
       title: 'Number Ninja',
-      titleEs: 'Ninja de Números',
+          titleEs: 'संख्या निंजा',
       description: 'Fast-paced math challenges to sharpen your calculation skills',
-      descriptionEs: 'Desafíos matemáticos de ritmo rápido para agudizar tus habilidades de cálculo',
+          descriptionEs: 'तेज़ गणित चुनौतियाँ अपनी गणना क्षमता तेज़ करें',
       icon: 'Zap',
       duration: 5,
       xpReward: 100,
@@ -366,9 +360,9 @@ const StudentDashboard = () => {
       id: 'game_4',
       type: 'memory',
       title: 'Memory Palace',
-      titleEs: 'Palacio de la Memoria',
+          titleEs: 'मेमोरी पैलेस',
       description: 'Train your memory with pattern recognition games',
-      descriptionEs: 'Entrena tu memoria con juegos de reconocimiento de patrones',
+          descriptionEs: 'पैटर्न पहचान खेलों से अपनी याददाश्त को प्रशिक्षित करें',
       icon: 'Eye',
       duration: 12,
       xpReward: 180,
@@ -379,9 +373,9 @@ const StudentDashboard = () => {
       id: 'game_5',
       type: 'puzzle',
       title: 'Shape Shifter',
-      titleEs: 'Cambiador de Formas',
+          titleEs: 'आकार परिवर्तक',
       description: 'Solve geometric puzzles and spatial reasoning challenges',
-      descriptionEs: 'Resuelve rompecabezas geométricos y desafíos de razonamiento espacial',
+          descriptionEs: 'ज्यामितीय पहेलियाँ और स्थानिक तर्क चुनौतियाँ हल करें',
       icon: 'Shapes',
       duration: 15,
       xpReward: 220,
@@ -392,9 +386,9 @@ const StudentDashboard = () => {
       id: 'game_6',
       type: 'aptitude',
       title: 'Pattern Master',
-      titleEs: 'Maestro de Patrones',
+          titleEs: 'पैटर्न मास्टर',
       description: 'Identify and complete complex patterns',
-      descriptionEs: 'Identifica y completa patrones complejos',
+          descriptionEs: 'जटिल पैटर्न पहचानें और पूरा करें',
       icon: 'Grid3x3',
       duration: 7,
       xpReward: 130,
@@ -432,10 +426,10 @@ const StudentDashboard = () => {
                     </div>
                     <div>
                       <h2 className="text-xl font-bold text-foreground">
-                        {currentLanguage === 'en' ? 'Your Subjects' : 'Tus Materias'}
+                            {currentLanguage === 'en' ? 'Your Subjects' : 'आपके विषय'}
                       </h2>
                       <p className="text-sm text-muted-foreground">
-                        {currentLanguage === 'en' ? 'Continue your learning journey' : 'Continúa tu viaje de aprendizaje'}
+                            {currentLanguage === 'en' ? 'Continue your learning journey' : 'अपनी सीखने की यात्रा जारी रखें'}
                       </p>
                     </div>
                   </div>
@@ -447,7 +441,7 @@ const StudentDashboard = () => {
                     iconPosition="right" 
                     iconSize={16}
                   >
-                    {currentLanguage === 'en' ? 'View All' : 'Ver Todos'}
+                        {currentLanguage === 'en' ? 'View All' : 'सभी देखें'}
                   </Button>
                 </div>
 
@@ -484,7 +478,7 @@ const StudentDashboard = () => {
           {/* Quick Actions */}
           <div className="bg-card border border-border rounded-xl p-6">
             <h3 className="text-lg font-bold text-foreground mb-4">
-              {currentLanguage === 'en' ? 'Quick Actions' : 'Acciones Rápidas'}
+                  {currentLanguage === 'en' ? 'Quick Actions' : 'त्वरित क्रियाएँ'}
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               <Button 
@@ -494,7 +488,7 @@ const StudentDashboard = () => {
               >
                 <Icon name="BookOpen" size={24} />
                 <span className="text-sm">
-                  {currentLanguage === 'en' ? 'Browse Subjects' : 'Explorar Materias'}
+                      {currentLanguage === 'en' ? 'Browse Subjects' : 'विषय ब्राउज़ करें'}
                 </span>
               </Button>
               
@@ -505,7 +499,7 @@ const StudentDashboard = () => {
               >
                 <Icon name="TrendingUp" size={24} />
                 <span className="text-sm">
-                  {currentLanguage === 'en' ? 'View Progress' : 'Ver Progreso'}
+                      {currentLanguage === 'en' ? 'View Progress' : 'प्रगति देखें'}
                 </span>
               </Button>
               
@@ -516,7 +510,7 @@ const StudentDashboard = () => {
               >
                 <Icon name="HelpCircle" size={24} />
                 <span className="text-sm">
-                  {currentLanguage === 'en' ? 'Take Quiz' : 'Hacer Cuestionario'}
+                      {currentLanguage === 'en' ? 'Take Quiz' : 'क्विज़ दें'}
                 </span>
               </Button>
               
@@ -527,7 +521,7 @@ const StudentDashboard = () => {
               >
                 <Icon name="Award" size={24} />
                 <span className="text-sm">
-                  {currentLanguage === 'en' ? 'Achievements' : 'Logros'}
+                      {currentLanguage === 'en' ? 'Achievements' : 'उपलब्धियाँ'}
                 </span>
               </Button>
             </div>

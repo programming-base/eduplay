@@ -58,12 +58,12 @@ const LeaderboardWidget = ({ leaderboardData, currentStudent, className = '' }) 
           </div>
           <div>
             <h3 className="text-lg font-bold text-foreground">
-              {currentLanguage === 'en' ? 'Leaderboard' : 'Tabla de Posiciones'}
+              {currentLanguage === 'en' ? 'Leaderboard' : 'लीडरबोर्ड'}
             </h3>
             <p className="text-sm text-muted-foreground">
               {viewType === 'class' 
-                ? (currentLanguage === 'en' ? 'Your class ranking' : 'Ranking de tu clase')
-                : (currentLanguage === 'en' ? 'School-wide ranking' : 'Ranking escolar')
+                ? (currentLanguage === 'en' ? 'Your class ranking' : 'आपकी कक्षा रैंकिंग')
+                : (currentLanguage === 'en' ? 'School-wide ranking' : 'स्कूल-व्यापी रैंकिंग')
               }
             </p>
           </div>
@@ -78,7 +78,7 @@ const LeaderboardWidget = ({ leaderboardData, currentStudent, className = '' }) 
           iconName="Users"
           iconSize={16}
         >
-          {currentLanguage === 'en' ? 'Class' : 'Clase'}
+          {currentLanguage === 'en' ? 'Class' : 'कक्षा'}
         </Button>
         <Button
           variant={viewType === 'school' ? 'default' : 'ghost'}
@@ -87,7 +87,7 @@ const LeaderboardWidget = ({ leaderboardData, currentStudent, className = '' }) 
           iconName="School"
           iconSize={16}
         >
-          {currentLanguage === 'en' ? 'School' : 'Escuela'}
+          {currentLanguage === 'en' ? 'School' : 'स्कूल'}
         </Button>
       </div>
       {/* Top 3 Podium */}
@@ -133,7 +133,7 @@ const LeaderboardWidget = ({ leaderboardData, currentStudent, className = '' }) 
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between">
                   <p className={`font-medium truncate ${isCurrentStudent ? 'text-primary' : 'text-foreground'}`}>
-                    {student?.name} {isCurrentStudent && `(${currentLanguage === 'en' ? 'You' : 'Tú'})`}
+                    {student?.name} {isCurrentStudent && `(${currentLanguage === 'en' ? 'You' : 'आप'})`}
                   </p>
                   <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                     <Icon name="Zap" size={14} />
@@ -141,9 +141,9 @@ const LeaderboardWidget = ({ leaderboardData, currentStudent, className = '' }) 
                   </div>
                 </div>
                 <div className="flex items-center space-x-4 text-xs text-muted-foreground mt-1">
-                  <span>{currentLanguage === 'en' ? 'Level' : 'Nivel'} {student?.level}</span>
-                  <span>{student?.badges} {currentLanguage === 'en' ? 'badges' : 'insignias'}</span>
-                  <span>{student?.streak} {currentLanguage === 'en' ? 'day streak' : 'días seguidos'}</span>
+                  <span>{currentLanguage === 'en' ? 'Level' : 'स्तर'} {student?.level}</span>
+                  <span>{student?.badges} {currentLanguage === 'en' ? 'badges' : 'बैज'}</span>
+                  <span>{student?.streak} {currentLanguage === 'en' ? 'day streak' : 'दिनों की स्ट्रीक'}</span>
                 </div>
               </div>
               {isCurrentStudent && (
@@ -166,7 +166,7 @@ const LeaderboardWidget = ({ leaderboardData, currentStudent, className = '' }) 
             <div className="flex-1 min-w-0">
               <div className="flex items-center justify-between">
                 <p className="font-medium text-primary truncate">
-                  {currentStudent?.name} ({currentLanguage === 'en' ? 'You' : 'Tú'})
+                  {currentStudent?.name} ({currentLanguage === 'en' ? 'You' : 'आप'})
                 </p>
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                   <Icon name="Zap" size={14} />
@@ -174,9 +174,9 @@ const LeaderboardWidget = ({ leaderboardData, currentStudent, className = '' }) 
                 </div>
               </div>
               <div className="flex items-center space-x-4 text-xs text-muted-foreground mt-1">
-                <span>{currentLanguage === 'en' ? 'Level' : 'Nivel'} {currentStudent?.level}</span>
-                <span>{currentStudent?.badges} {currentLanguage === 'en' ? 'badges' : 'insignias'}</span>
-                <span>{currentStudent?.streak} {currentLanguage === 'en' ? 'day streak' : 'días seguidos'}</span>
+                <span>{currentLanguage === 'en' ? 'Level' : 'स्तर'} {currentStudent?.level}</span>
+                <span>{currentStudent?.badges} {currentLanguage === 'en' ? 'badges' : 'बैज'}</span>
+                <span>{currentStudent?.streak} {currentLanguage === 'en' ? 'day streak' : 'दिनों की स्ट्रीक'}</span>
               </div>
             </div>
 

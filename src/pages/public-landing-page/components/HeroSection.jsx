@@ -29,34 +29,34 @@ const HeroSection = () => {
     navigate('/teacher-login');
   };
 
-  const content = {
-    en: {
-      title: "Transform Learning into an Adventure",
-      subtitle: "Gamified education platform that makes K-12 learning engaging through points, badges, and interactive challenges",
-      description: "Join thousands of students who are already leveling up their education with EduPlay\'s innovative approach to classroom learning.",
-      trySample: "Try Sample Course",
-      schoolLogin: "School Login",
-      features: [
-        "Interactive Quizzes & Games",
-        "Real-time Progress Tracking",
-        "Achievement Badges & Rewards",
-        "Multilingual Support"
-      ]
-    },
-    es: {
-      title: "Transforma el Aprendizaje en una Aventura",
-      subtitle: "Plataforma educativa gamificada que hace el aprendizaje K-12 atractivo a través de puntos, insignias y desafíos interactivos",
-      description: "Únete a miles de estudiantes que ya están mejorando su educación con el enfoque innovador de EduPlay para el aprendizaje en el aula.",
-      trySample: "Probar Curso de Muestra",
-      schoolLogin: "Acceso Escolar",
-      features: [
-        "Cuestionarios y Juegos Interactivos",
-        "Seguimiento de Progreso en Tiempo Real",
-        "Insignias y Recompensas de Logros",
-        "Soporte Multiidioma"
-      ]
-    }
-  };
+const content = {
+  en: {
+    title: "Transform Learning into an Adventure",
+    subtitle: "Gamified education platform that makes K-12 learning engaging through points, badges, and interactive challenges",
+    description: "Join thousands of students who are already leveling up their education with EduPlay's innovative approach to classroom learning.",
+    trySample: "Try Sample Course",
+    schoolLogin: "School Login",
+    features: [
+      "Interactive Quizzes & Games",
+      "Real-time Progress Tracking",
+      "Achievement Badges & Rewards",
+      "Multilingual Support"
+    ]
+  },
+  hi: {
+    title: "सीखने को एक रोमांचक यात्रा बनाएं",
+    subtitle: "गेमिफाइड शिक्षा मंच जो कक्षा 1 से 12 तक के सीखने को अंक, बैज और इंटरएक्टिव चुनौतियों के माध्यम से रोचक बनाता है",
+    description: "हजारों छात्रों से जुड़ें जो पहले से ही EduPlay के नवीन दृष्टिकोण से अपनी शिक्षा को और बेहतर बना रहे हैं।",
+    trySample: "नमूना पाठ्यक्रम आज़माएँ",
+    schoolLogin: "स्कूल लॉगिन",
+    features: [
+      "इंटरएक्टिव क्विज़ और खेल",
+      "रीयल-टाइम प्रगति ट्रैकिंग",
+      "उपलब्धि बैज और पुरस्कार",
+      "बहुभाषी समर्थन"
+    ]
+  }
+};
 
   const currentContent = content?.[currentLanguage];
 
@@ -126,13 +126,13 @@ const HeroSection = () => {
               <div className="text-center">
                 <div className="text-2xl lg:text-3xl font-bold text-primary">10K+</div>
                 <div className="text-sm text-muted-foreground">
-                  {currentLanguage === 'en' ? 'Students' : 'Estudiantes'}
+                  {currentLanguage === 'en' ? 'Students' : 'छात्र'}
                 </div>
               </div>
               <div className="text-center">
                 <div className="text-2xl lg:text-3xl font-bold text-secondary">500+</div>
                 <div className="text-sm text-muted-foreground">
-                  {currentLanguage === 'en' ? 'Schools' : 'Escuelas'}
+                  {currentLanguage === 'en' ? 'Schools' : 'विद्यालय'}
                 </div>
               </div>
               <div className="text-center">

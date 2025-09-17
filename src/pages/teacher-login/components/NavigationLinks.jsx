@@ -22,13 +22,13 @@ const NavigationLinks = () => {
   const navigationOptions = [
     {
       path: '/public-landing-page',
-      label: currentLanguage === 'en' ? 'Back to Home' : 'Volver al Inicio',
+      label: currentLanguage === 'en' ? 'Back to Home' : 'मुखपृष्ठ पर जाएं',
       icon: 'Home',
       variant: 'ghost'
     },
     {
       path: '/student-login',
-      label: currentLanguage === 'en' ? 'Student Login' : 'Acceso de Estudiante',
+      label: currentLanguage === 'en' ? 'Student Login' : 'छात्र लॉगिन',
       icon: 'BookOpen',
       variant: 'outline'
     }
@@ -59,7 +59,7 @@ const NavigationLinks = () => {
       {/* Additional Info */}
       <div className="mt-6 text-center">
         <p className="text-sm text-muted-foreground">
-          {currentLanguage === 'en' ?'New to EduPlay? Contact your school administrator.' :'¿Nuevo en EduPlay? Contacta al administrador de tu escuela.'}
+          {currentLanguage === 'en' ? 'New to EduPlay? Contact your school administrator.' : 'EduPlay में नए हैं? अपने स्कूल प्रशासक से संपर्क करें।'}
         </p>
       </div>
     </div>

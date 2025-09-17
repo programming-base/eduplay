@@ -46,10 +46,10 @@ const ProgressChart = ({ progressData, className = '' }) => {
           </div>
           <div>
             <h3 className="text-lg font-bold text-foreground">
-              {currentLanguage === 'en' ? 'Learning Progress' : 'Progreso de Aprendizaje'}
+              {currentLanguage === 'en' ? 'Learning Progress' : 'सीखने की प्रगति'}
             </h3>
             <p className="text-sm text-muted-foreground">
-              {currentLanguage === 'en' ? 'Last 7 days' : 'Últimos 7 días'}
+              {currentLanguage === 'en' ? 'Last 7 days' : 'पिछले 7 दिन'}
             </p>
           </div>
         </div>
@@ -62,7 +62,7 @@ const ProgressChart = ({ progressData, className = '' }) => {
             iconName="TrendingUp"
             iconSize={16}
           >
-            {currentLanguage === 'en' ? 'Line' : 'Línea'}
+            {currentLanguage === 'en' ? 'Line' : 'रेखा'}
           </Button>
           <Button
             variant={chartType === 'bar' ? 'default' : 'ghost'}
@@ -71,7 +71,7 @@ const ProgressChart = ({ progressData, className = '' }) => {
             iconName="BarChart3"
             iconSize={16}
           >
-            {currentLanguage === 'en' ? 'Bar' : 'Barras'}
+            {currentLanguage === 'en' ? 'Bar' : 'बार'}
           </Button>
         </div>
       </div>
@@ -97,7 +97,7 @@ const ProgressChart = ({ progressData, className = '' }) => {
                 stroke="var(--color-primary)" 
                 strokeWidth={3}
                 dot={{ fill: 'var(--color-primary)', strokeWidth: 2, r: 4 }}
-                name={currentLanguage === 'en' ? 'XP Earned' : 'XP Ganado'}
+                name={currentLanguage === 'en' ? 'XP Earned' : 'प्राप्त XP'}
               />
               <Line 
                 type="monotone" 
@@ -105,7 +105,7 @@ const ProgressChart = ({ progressData, className = '' }) => {
                 stroke="var(--color-success)" 
                 strokeWidth={3}
                 dot={{ fill: 'var(--color-success)', strokeWidth: 2, r: 4 }}
-                name={currentLanguage === 'en' ? 'Progress' : 'Progreso'}
+                name={currentLanguage === 'en' ? 'Progress' : 'प्रगति'}
               />
             </LineChart>
           ) : (
@@ -124,7 +124,7 @@ const ProgressChart = ({ progressData, className = '' }) => {
               <Bar 
                 dataKey="xp" 
                 fill="var(--color-primary)"
-                name={currentLanguage === 'en' ? 'XP Earned' : 'XP Ganado'}
+                name={currentLanguage === 'en' ? 'XP Earned' : 'प्राप्त XP'}
                 radius={[4, 4, 0, 0]}
               />
             </BarChart>
@@ -138,7 +138,7 @@ const ProgressChart = ({ progressData, className = '' }) => {
             {progressData?.reduce((sum, day) => sum + day?.xp, 0)}
           </p>
           <p className="text-sm text-muted-foreground">
-            {currentLanguage === 'en' ? 'Total XP' : 'XP Total'}
+            {currentLanguage === 'en' ? 'Total XP' : 'कुल XP'}
           </p>
         </div>
         <div className="text-center">
@@ -146,7 +146,7 @@ const ProgressChart = ({ progressData, className = '' }) => {
             {Math.round(progressData?.reduce((sum, day) => sum + day?.progress, 0) / progressData?.length)}%
           </p>
           <p className="text-sm text-muted-foreground">
-            {currentLanguage === 'en' ? 'Avg Progress' : 'Progreso Promedio'}
+            {currentLanguage === 'en' ? 'Avg Progress' : 'औसत प्रगति'}
           </p>
         </div>
         <div className="text-center">
@@ -154,7 +154,7 @@ const ProgressChart = ({ progressData, className = '' }) => {
             {progressData?.filter(day => day?.xp > 0)?.length}
           </p>
           <p className="text-sm text-muted-foreground">
-            {currentLanguage === 'en' ? 'Active Days' : 'Días Activos'}
+            {currentLanguage === 'en' ? 'Active Days' : 'सक्रिय दिन'}
           </p>
         </div>
       </div>

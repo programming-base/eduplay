@@ -71,10 +71,10 @@ const StudentLogin = ({ login }) => {
               </div>
               <div>
                 <h1 className="text-3xl lg:text-4xl font-bold text-foreground">
-                  {currentLanguage === 'en' ? 'Student Login' : 'Acceso de Estudiante'}
+                  {currentLanguage === 'en' ? 'Student Login' : 'छात्र लॉगिन'}
                 </h1>
                 <p className="text-lg text-muted-foreground mt-1">
-                  {currentLanguage === 'en' ?'Welcome back! Ready to learn and play?' :'¡Bienvenido de vuelta! ¿Listo para aprender y jugar?'}
+                  {currentLanguage === 'en' ? 'Welcome back! Ready to learn and play?' : 'फिर से स्वागत है! क्या आप सीखने और खेलने के लिए तैयार हैं?'}
                 </p>
               </div>
             </div>
@@ -89,7 +89,7 @@ const StudentLogin = ({ login }) => {
                 iconPosition="left"
                 iconSize={16}
               >
-                {currentLanguage === 'en' ? 'Home' : 'Inicio'}
+                {currentLanguage === 'en' ? 'Home' : 'मुखपृष्ठ'}
               </Button>
               <div className="w-px h-6 bg-border" />
               <Button
@@ -100,7 +100,7 @@ const StudentLogin = ({ login }) => {
                 iconPosition="left"
                 iconSize={16}
               >
-                {currentLanguage === 'en' ? 'Teacher Login' : 'Acceso Docente'}
+                {currentLanguage === 'en' ? 'Teacher Login' : 'शिक्षक लॉगिन'}
               </Button>
             </div>
           </div>
@@ -140,10 +140,10 @@ const StudentLogin = ({ login }) => {
                 <Icon name="Star" size={24} className="text-warning" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">
-                {currentLanguage === 'en' ? 'Safe & Fun Learning Environment' : 'Ambiente de Aprendizaje Seguro y Divertido'}
+                {currentLanguage === 'en' ? 'Safe & Fun Learning Environment' : 'सुरक्षित और मज़ेदार शिक्षण वातावरण'}
               </h3>
               <p className="text-sm text-muted-foreground">
-                {currentLanguage === 'en' ?'EduPlay provides a secure, engaging platform where students can learn through interactive games, earn achievements, and track their progress in a supportive environment.' :'EduPlay proporciona una plataforma segura y atractiva donde los estudiantes pueden aprender a través de juegos interactivos, obtener logros y seguir su progreso en un ambiente de apoyo.'}
+                {currentLanguage === 'en' ? 'EduPlay provides a secure, engaging platform where students can learn through interactive games, earn achievements, and track their progress in a supportive environment.' : 'EduPlay एक सुरक्षित, आकर्षक मंच प्रदान करता है जहाँ छात्र इंटरैक्टिव खेलों के माध्यम से सीख सकते हैं, उपलब्धियाँ प्राप्त कर सकते हैं और सहायक वातावरण में अपनी प्रगति को ट्रैक कर सकते हैं।'}
               </p>
             </div>
           </div>

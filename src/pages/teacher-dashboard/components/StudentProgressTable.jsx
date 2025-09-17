@@ -122,10 +122,10 @@ const StudentProgressTable = ({ onViewStudent, onAwardBadge, onSendMessage }) =>
       }
     } else {
       switch (status) {
-        case 'excellent': return 'Excelente';
-        case 'good': return 'Bueno';
-        case 'needs-attention': return 'Necesita Atención';
-        default: return 'Desconocido';
+          case 'excellent': return 'उत्कृष्ट';
+          case 'good': return 'अच्छा';
+          case 'needs-attention': return 'ध्यान देने की आवश्यकता';
+          default: return 'अज्ञात';
       }
     }
   };
@@ -167,10 +167,10 @@ const StudentProgressTable = ({ onViewStudent, onAwardBadge, onSendMessage }) =>
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-xl font-semibold text-foreground mb-1">
-            {currentLanguage === 'en' ? 'Student Progress Tracking' : 'Seguimiento del Progreso Estudiantil'}
+              {currentLanguage === 'en' ? 'Student Progress Tracking' : 'छात्र प्रगति ट्रैकिंग'}
           </h2>
           <p className="text-sm text-muted-foreground">
-            {currentLanguage === 'en' ? 'Monitor individual student performance and identify areas for improvement' : 'Monitorear el rendimiento individual de los estudiantes e identificar áreas de mejora'}
+              {currentLanguage === 'en' ? 'Monitor individual student performance and identify areas for improvement' : 'व्यक्तिगत छात्र प्रदर्शन की निगरानी करें और सुधार के क्षेत्रों की पहचान करें'}
           </p>
         </div>
         <div className="flex items-center space-x-2">
@@ -179,7 +179,7 @@ const StudentProgressTable = ({ onViewStudent, onAwardBadge, onSendMessage }) =>
             onChange={(e) => setFilterClass(e?.target?.value)}
             className="px-3 py-2 border border-border rounded-md text-sm bg-background text-foreground"
           >
-            <option value="all">{currentLanguage === 'en' ? 'All Classes' : 'Todas las Clases'}</option>
+              <option value="all">{currentLanguage === 'en' ? 'All Classes' : 'सभी कक्षाएं'}</option>
             {classes?.slice(1)?.map((className) => (
               <option key={className} value={className}>{className}</option>
             ))}
@@ -191,7 +191,7 @@ const StudentProgressTable = ({ onViewStudent, onAwardBadge, onSendMessage }) =>
             iconPosition="left"
             iconSize={16}
           >
-            {currentLanguage === 'en' ? 'Filter' : 'Filtrar'}
+              {currentLanguage === 'en' ? 'Filter' : 'फ़िल्टर'}
           </Button>
         </div>
       </div>
@@ -206,7 +206,7 @@ const StudentProgressTable = ({ onViewStudent, onAwardBadge, onSendMessage }) =>
               >
                 <div className="flex items-center space-x-1">
                   <span className="text-sm font-medium text-muted-foreground">
-                    {currentLanguage === 'en' ? 'Student' : 'Estudiante'}
+                      {currentLanguage === 'en' ? 'Student' : 'छात्र'}
                   </span>
                   <Icon name="ArrowUpDown" size={14} className="text-muted-foreground" />
                 </div>
@@ -217,19 +217,19 @@ const StudentProgressTable = ({ onViewStudent, onAwardBadge, onSendMessage }) =>
               >
                 <div className="flex items-center space-x-1">
                   <span className="text-sm font-medium text-muted-foreground">
-                    {currentLanguage === 'en' ? 'Score' : 'Puntuación'}
+                      {currentLanguage === 'en' ? 'Score' : 'स्कोर'}
                   </span>
                   <Icon name="ArrowUpDown" size={14} className="text-muted-foreground" />
                 </div>
               </th>
               <th className="text-left py-3 px-2">
                 <span className="text-sm font-medium text-muted-foreground">
-                  {currentLanguage === 'en' ? 'Progress' : 'Progreso'}
+                    {currentLanguage === 'en' ? 'Progress' : 'प्रगति'}
                 </span>
               </th>
               <th className="text-left py-3 px-2">
                 <span className="text-sm font-medium text-muted-foreground">
-                  {currentLanguage === 'en' ? 'Weak Areas' : 'Áreas Débiles'}
+                    {currentLanguage === 'en' ? 'Weak Areas' : 'कमजोर क्षेत्र'}
                 </span>
               </th>
               <th 
@@ -238,19 +238,19 @@ const StudentProgressTable = ({ onViewStudent, onAwardBadge, onSendMessage }) =>
               >
                 <div className="flex items-center space-x-1">
                   <span className="text-sm font-medium text-muted-foreground">
-                    {currentLanguage === 'en' ? 'Engagement' : 'Participación'}
+                      {currentLanguage === 'en' ? 'Engagement' : 'सक्रियता'}
                   </span>
                   <Icon name="ArrowUpDown" size={14} className="text-muted-foreground" />
                 </div>
               </th>
               <th className="text-left py-3 px-2">
                 <span className="text-sm font-medium text-muted-foreground">
-                  {currentLanguage === 'en' ? 'Status' : 'Estado'}
+                    {currentLanguage === 'en' ? 'Status' : 'स्थिति'}
                 </span>
               </th>
               <th className="text-right py-3 px-2">
                 <span className="text-sm font-medium text-muted-foreground">
-                  {currentLanguage === 'en' ? 'Actions' : 'Acciones'}
+                    {currentLanguage === 'en' ? 'Actions' : 'क्रियाएँ'}
                 </span>
               </th>
             </tr>
@@ -366,19 +366,19 @@ const StudentProgressTable = ({ onViewStudent, onAwardBadge, onSendMessage }) =>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="text-center">
             <div className="text-2xl font-bold text-success">{filteredAndSortedStudents?.filter(s => s?.status === 'excellent')?.length}</div>
-            <div className="text-sm text-muted-foreground">{currentLanguage === 'en' ? 'Excellent' : 'Excelente'}</div>
+              <div className="text-sm text-muted-foreground">{currentLanguage === 'en' ? 'Excellent' : 'उत्कृष्ट'}</div>
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-accent">{filteredAndSortedStudents?.filter(s => s?.status === 'good')?.length}</div>
-            <div className="text-sm text-muted-foreground">{currentLanguage === 'en' ? 'Good' : 'Bueno'}</div>
+              <div className="text-sm text-muted-foreground">{currentLanguage === 'en' ? 'Good' : 'अच्छा'}</div>
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-error">{filteredAndSortedStudents?.filter(s => s?.status === 'needs-attention')?.length}</div>
-            <div className="text-sm text-muted-foreground">{currentLanguage === 'en' ? 'Need Attention' : 'Necesitan Atención'}</div>
+              <div className="text-sm text-muted-foreground">{currentLanguage === 'en' ? 'Need Attention' : 'ध्यान देने की आवश्यकता'}</div>
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-primary">{Math.round(filteredAndSortedStudents?.reduce((acc, s) => acc + s?.overallScore, 0) / filteredAndSortedStudents?.length)}%</div>
-            <div className="text-sm text-muted-foreground">{currentLanguage === 'en' ? 'Avg. Score' : 'Puntuación Promedio'}</div>
+              <div className="text-sm text-muted-foreground">{currentLanguage === 'en' ? 'Avg. Score' : 'औसत स्कोर'}</div>
           </div>
         </div>
       </div>

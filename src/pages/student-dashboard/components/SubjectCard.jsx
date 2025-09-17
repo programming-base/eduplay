@@ -60,14 +60,14 @@ const SubjectCard = ({ subject, className = '' }) => {
                 {currentLanguage === 'en' ? subject?.name : subject?.nameEs}
               </h3>
               <p className="text-sm text-muted-foreground">
-                {subject?.chaptersCompleted}/{subject?.totalChapters} {currentLanguage === 'en' ? 'chapters' : 'capítulos'}
+                {subject?.chaptersCompleted}/{subject?.totalChapters} {currentLanguage === 'en' ? 'chapters' : 'अध्याय'}
               </p>
             </div>
           </div>
 
           {/* Level Badge */}
           <div className={`px-3 py-1 rounded-full text-white text-sm font-bold ${getLevelBadgeColor(subject?.level)}`}>
-            {currentLanguage === 'en' ? 'Level' : 'Nivel'} {subject?.level}
+            {currentLanguage === 'en' ? 'Level' : 'स्तर'} {subject?.level}
           </div>
         </div>
 
@@ -75,7 +75,7 @@ const SubjectCard = ({ subject, className = '' }) => {
         <div className="mb-4">
           <div className="flex justify-between items-center mb-2">
             <span className="text-sm font-medium text-foreground">
-              {currentLanguage === 'en' ? 'Progress' : 'Progreso'}
+              {currentLanguage === 'en' ? 'Progress' : 'प्रगति'}
             </span>
             <span className="text-sm font-bold text-primary">{subject?.progress}%</span>
           </div>
@@ -96,7 +96,7 @@ const SubjectCard = ({ subject, className = '' }) => {
             <div>
               <p className="text-sm font-bold text-foreground">{subject?.xpPoints} XP</p>
               <p className="text-xs text-muted-foreground">
-                {currentLanguage === 'en' ? 'Available' : 'Disponible'}
+                {currentLanguage === 'en' ? 'Available' : 'उपलब्ध'}
               </p>
             </div>
           </div>
@@ -108,7 +108,7 @@ const SubjectCard = ({ subject, className = '' }) => {
             <div>
               <p className="text-sm font-bold text-foreground">{subject?.streak}</p>
               <p className="text-xs text-muted-foreground">
-                {currentLanguage === 'en' ? 'day streak' : 'días seguidos'}
+                {currentLanguage === 'en' ? 'day streak' : 'दिनों की स्ट्रीक'}
               </p>
             </div>
           </div>
@@ -130,7 +130,7 @@ const SubjectCard = ({ subject, className = '' }) => {
           </div>
 
           <Button variant="ghost" size="sm" iconName="ArrowRight" iconPosition="right" iconSize={16}>
-            {currentLanguage === 'en' ? 'Continue' : 'Continuar'}
+            {currentLanguage === 'en' ? 'Continue' : 'जारी रखें'}
           </Button>
         </div>
 

@@ -5,12 +5,12 @@ const LoginStepIndicator = ({ currentStep, totalSteps, currentLanguage }) => {
   const steps = [
     {
       id: 1,
-      title: currentLanguage === 'en' ? 'Select Class' : 'Seleccionar Clase',
+  title: currentLanguage === 'en' ? 'Select Class' : 'कक्षा चुनें',
       icon: 'Users'
     },
     {
       id: 2,
-      title: currentLanguage === 'en' ? 'Enter Roll Number' : 'Ingresar Número de Lista',
+  title: currentLanguage === 'en' ? 'Enter Roll Number' : 'रोल नंबर दर्ज करें',
       icon: 'User'
     }
   ];
@@ -57,7 +57,7 @@ const LoginStepIndicator = ({ currentStep, totalSteps, currentLanguage }) => {
           {steps?.find(step => step?.id === currentStep)?.title}
         </p>
         <p className="text-xs text-muted-foreground mt-1">
-          {currentLanguage === 'en' ? 'Step' : 'Paso'} {currentStep} {currentLanguage === 'en' ? 'of' : 'de'} {totalSteps}
+          {currentLanguage === 'en' ? 'Step' : 'चरण'} {currentStep} {currentLanguage === 'en' ? 'of' : 'का'} {totalSteps}
         </p>
       </div>
     </div>

@@ -13,48 +13,48 @@ const QuickActionPanel = ({ onQuickAction }) => {
   const quickActions = [
     {
       id: 'create-quiz',
-      title: currentLanguage === 'en' ? 'Create Quiz' : 'Crear Quiz',
-      description: currentLanguage === 'en' ? 'Build interactive assessments' : 'Crear evaluaciones interactivas',
+  title: currentLanguage === 'en' ? 'Create Quiz' : 'क्विज बनाएं',
+  description: currentLanguage === 'en' ? 'Build interactive assessments' : 'इंटरएक्टिव मूल्यांकन बनाएं',
       icon: 'HelpCircle',
       color: 'text-primary bg-primary/10 hover:bg-primary/20',
       shortcut: 'Ctrl+Q'
     },
     {
       id: 'upload-content',
-      title: currentLanguage === 'en' ? 'Upload Content' : 'Subir Contenido',
-      description: currentLanguage === 'en' ? 'Add learning materials' : 'Agregar materiales de aprendizaje',
+  title: currentLanguage === 'en' ? 'Upload Content' : 'सामग्री अपलोड करें',
+  description: currentLanguage === 'en' ? 'Add learning materials' : 'शैक्षिक सामग्री जोड़ें',
       icon: 'Upload',
       color: 'text-secondary bg-secondary/10 hover:bg-secondary/20',
       shortcut: 'Ctrl+U'
     },
     {
       id: 'student-analysis',
-      title: currentLanguage === 'en' ? 'Student Analysis' : 'Análisis de Estudiantes',
-      description: currentLanguage === 'en' ? 'View detailed performance' : 'Ver rendimiento detallado',
+  title: currentLanguage === 'en' ? 'Student Analysis' : 'छात्र विश्लेषण',
+  description: currentLanguage === 'en' ? 'View detailed performance' : 'विस्तृत प्रदर्शन देखें',
       icon: 'BarChart3',
       color: 'text-accent bg-accent/10 hover:bg-accent/20',
       shortcut: 'Ctrl+A'
     },
     {
       id: 'send-announcement',
-      title: currentLanguage === 'en' ? 'Send Announcement' : 'Enviar Anuncio',
-      description: currentLanguage === 'en' ? 'Notify students and parents' : 'Notificar a estudiantes y padres',
+  title: currentLanguage === 'en' ? 'Send Announcement' : 'घोषणा भेजें',
+  description: currentLanguage === 'en' ? 'Notify students and parents' : 'छात्रों और अभिभावकों को सूचित करें',
       icon: 'Megaphone',
       color: 'text-success bg-success/10 hover:bg-success/20',
       shortcut: 'Ctrl+N'
     },
     {
       id: 'schedule-class',
-      title: currentLanguage === 'en' ? 'Schedule Class' : 'Programar Clase',
-      description: currentLanguage === 'en' ? 'Plan upcoming sessions' : 'Planificar próximas sesiones',
+  title: currentLanguage === 'en' ? 'Schedule Class' : 'कक्षा निर्धारित करें',
+  description: currentLanguage === 'en' ? 'Plan upcoming sessions' : 'आगामी सत्रों की योजना बनाएं',
       icon: 'Calendar',
       color: 'text-warning bg-warning/10 hover:bg-warning/20',
       shortcut: 'Ctrl+S'
     },
     {
       id: 'grade-assignments',
-      title: currentLanguage === 'en' ? 'Grade Assignments' : 'Calificar Tareas',
-      description: currentLanguage === 'en' ? 'Review submitted work' : 'Revisar trabajo enviado',
+  title: currentLanguage === 'en' ? 'Grade Assignments' : 'असाइनमेंट ग्रेड करें',
+  description: currentLanguage === 'en' ? 'Review submitted work' : 'जमा किए गए कार्य की समीक्षा करें',
       icon: 'CheckCircle',
       color: 'text-error bg-error/10 hover:bg-error/20',
       shortcut: 'Ctrl+G'
@@ -64,32 +64,32 @@ const QuickActionPanel = ({ onQuickAction }) => {
   const recentActivities = [
     {
       id: 1,
-      action: currentLanguage === 'en' ? 'Quiz Created' : 'Quiz Creado',
-      details: currentLanguage === 'en' ? 'Mathematics - Algebra Basics' : 'Matemáticas - Fundamentos de Álgebra',
+  action: currentLanguage === 'en' ? 'Quiz Created' : 'क्विज बनाया गया',
+  details: currentLanguage === 'en' ? 'Mathematics - Algebra Basics' : 'गणित - बीजगणित मूल बातें',
       timestamp: '2 hours ago',
       icon: 'HelpCircle',
       color: 'text-primary'
     },
     {
       id: 2,
-      action: currentLanguage === 'en' ? 'Content Uploaded' : 'Contenido Subido',
-      details: currentLanguage === 'en' ? 'Science Chapter 5 - Chemical Reactions' : 'Ciencias Capítulo 5 - Reacciones Químicas',
+  action: currentLanguage === 'en' ? 'Content Uploaded' : 'सामग्री अपलोड की गई',
+  details: currentLanguage === 'en' ? 'Science Chapter 5 - Chemical Reactions' : 'विज्ञान अध्याय 5 - रासायनिक अभिक्रियाएँ',
       timestamp: '4 hours ago',
       icon: 'Upload',
       color: 'text-secondary'
     },
     {
       id: 3,
-      action: currentLanguage === 'en' ? 'Badge Awarded' : 'Insignia Otorgada',
-      details: currentLanguage === 'en' ? 'Math Master to Emma Rodriguez' : 'Maestro de Matemáticas a Emma Rodriguez',
+  action: currentLanguage === 'en' ? 'Badge Awarded' : 'बैज प्रदान किया गया',
+  details: currentLanguage === 'en' ? 'Math Master to Emma Rodriguez' : 'गणित मास्टर - एम्मा रोड्रिगेज को',
       timestamp: '6 hours ago',
       icon: 'Award',
       color: 'text-success'
     },
     {
       id: 4,
-      action: currentLanguage === 'en' ? 'Announcement Sent' : 'Anuncio Enviado',
-      details: currentLanguage === 'en' ? 'Upcoming parent-teacher meeting' : 'Próxima reunión de padres y maestros',
+  action: currentLanguage === 'en' ? 'Announcement Sent' : 'घोषणा भेजी गई',
+  details: currentLanguage === 'en' ? 'Upcoming parent-teacher meeting' : 'आगामी अभिभावक-शिक्षक बैठक',
       timestamp: '1 day ago',
       icon: 'Megaphone',
       color: 'text-accent'
@@ -99,22 +99,22 @@ const QuickActionPanel = ({ onQuickAction }) => {
   const upcomingTasks = [
     {
       id: 1,
-      task: currentLanguage === 'en' ? 'Grade Math Quiz' : 'Calificar Quiz de Matemáticas',
-      dueDate: currentLanguage === 'en' ? 'Due today' : 'Vence hoy',
+  task: currentLanguage === 'en' ? 'Grade Math Quiz' : 'गणित क्विज ग्रेड करें',
+  dueDate: currentLanguage === 'en' ? 'Due today' : 'आज देय',
       priority: 'high',
       class: 'Grade 8A'
     },
     {
       id: 2,
-      task: currentLanguage === 'en' ? 'Prepare Science Lesson' : 'Preparar Lección de Ciencias',
-      dueDate: currentLanguage === 'en' ? 'Due tomorrow' : 'Vence mañana',
+  task: currentLanguage === 'en' ? 'Prepare Science Lesson' : 'विज्ञान पाठ तैयार करें',
+  dueDate: currentLanguage === 'en' ? 'Due tomorrow' : 'कल देय',
       priority: 'medium',
       class: 'Grade 8B'
     },
     {
       id: 3,
-      task: currentLanguage === 'en' ? 'Review Assignment Submissions' : 'Revisar Envíos de Tareas',
-      dueDate: currentLanguage === 'en' ? 'Due in 2 days' : 'Vence en 2 días',
+  task: currentLanguage === 'en' ? 'Review Assignment Submissions' : 'असाइनमेंट सबमिशन की समीक्षा करें',
+  dueDate: currentLanguage === 'en' ? 'Due in 2 days' : '2 दिनों में देय',
       priority: 'low',
       class: 'Grade 8A'
     }
@@ -139,10 +139,10 @@ const QuickActionPanel = ({ onQuickAction }) => {
       }
     } else {
       switch (priority) {
-        case 'high': return 'Alta';
-        case 'medium': return 'Media';
-        case 'low': return 'Baja';
-        default: return 'Desconocida';
+        case 'high': return 'उच्च';
+        case 'medium': return 'मध्यम';
+        case 'low': return 'निम्न';
+        default: return 'अज्ञात';
       }
     }
   };
@@ -153,10 +153,10 @@ const QuickActionPanel = ({ onQuickAction }) => {
       <div className="bg-card border border-border rounded-lg p-6">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-semibold text-foreground">
-            {currentLanguage === 'en' ? 'Quick Actions' : 'Acciones Rápidas'}
+            {currentLanguage === 'en' ? 'Quick Actions' : 'त्वरित क्रियाएँ'}
           </h2>
           <Button variant="ghost" size="sm" iconName="Settings" iconSize={16}>
-            {currentLanguage === 'en' ? 'Customize' : 'Personalizar'}
+            {currentLanguage === 'en' ? 'Customize' : 'अनुकूलित करें'}
           </Button>
         </div>
         
@@ -183,10 +183,10 @@ const QuickActionPanel = ({ onQuickAction }) => {
       <div className="bg-card border border-border rounded-lg p-6">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-foreground">
-            {currentLanguage === 'en' ? 'Recent Activities' : 'Actividades Recientes'}
+            {currentLanguage === 'en' ? 'Recent Activities' : 'हाल की गतिविधियाँ'}
           </h3>
           <Button variant="ghost" size="sm" iconName="Clock" iconSize={16}>
-            {currentLanguage === 'en' ? 'View All' : 'Ver Todo'}
+            {currentLanguage === 'en' ? 'View All' : 'सभी देखें'}
           </Button>
         </div>
         
@@ -209,10 +209,10 @@ const QuickActionPanel = ({ onQuickAction }) => {
       <div className="bg-card border border-border rounded-lg p-6">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-foreground">
-            {currentLanguage === 'en' ? 'Upcoming Tasks' : 'Tareas Próximas'}
+            {currentLanguage === 'en' ? 'Upcoming Tasks' : 'आगामी कार्य'}
           </h3>
           <Button variant="ghost" size="sm" iconName="Plus" iconSize={16}>
-            {currentLanguage === 'en' ? 'Add Task' : 'Agregar Tarea'}
+            {currentLanguage === 'en' ? 'Add Task' : 'कार्य जोड़ें'}
           </Button>
         </div>
         

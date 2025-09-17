@@ -5,71 +5,86 @@ import Button from '../../../components/ui/Button';
 const ClassSelectionGrid = ({ onClassSelect, currentLanguage }) => {
   const [selectedClass, setSelectedClass] = useState(null);
 
-  const classData = [
-    {
-      id: 'class-6',
-      name: currentLanguage === 'en' ? 'Class 6' : 'Clase 6',
-      teacher: currentLanguage === 'en' ? 'Ms. Sarah Johnson' : 'Sra. Sarah Johnson',
-      studentCount: 28,
-      color: 'from-blue-400 to-blue-600',
-      icon: 'BookOpen',
-      subjects: currentLanguage === 'en' ? ['Math', 'Science', 'English'] : ['Matemáticas', 'Ciencias', 'Inglés']
-    },
-    {
-      id: 'class-7',
-      name: currentLanguage === 'en' ? 'Class 7' : 'Clase 7',
-      teacher: currentLanguage === 'en' ? 'Mr. David Wilson' : 'Sr. David Wilson',
-      studentCount: 32,
-      color: 'from-green-400 to-green-600',
-      icon: 'GraduationCap',
-      subjects: currentLanguage === 'en' ? ['Math', 'Science', 'History'] : ['Matemáticas', 'Ciencias', 'Historia']
-    },
-    {
-      id: 'class-8',
-      name: currentLanguage === 'en' ? 'Class 8' : 'Clase 8',
-      teacher: currentLanguage === 'en' ? 'Ms. Emily Davis' : 'Sra. Emily Davis',
-      studentCount: 25,
-      color: 'from-purple-400 to-purple-600',
-      icon: 'Users',
-      subjects: currentLanguage === 'en' ? ['Math', 'Physics', 'Chemistry'] : ['Matemáticas', 'Física', 'Química']
-    },
-    {
-      id: 'class-9',
-      name: currentLanguage === 'en' ? 'Class 9' : 'Clase 9',
-      teacher: currentLanguage === 'en' ? 'Mr. Michael Brown' : 'Sr. Michael Brown',
-      studentCount: 30,
-      color: 'from-orange-400 to-orange-600',
-      icon: 'Award',
-      subjects: currentLanguage === 'en' ? ['Math', 'Biology', 'Geography'] : ['Matemáticas', 'Biología', 'Geografía']
-    },
-    {
-      id: 'class-10',
-      name: currentLanguage === 'en' ? 'Class 10' : 'Clase 10',
-      teacher: currentLanguage === 'en' ? 'Ms. Lisa Anderson' : 'Sra. Lisa Anderson',
-      studentCount: 27,
-      color: 'from-red-400 to-red-600',
-      icon: 'Trophy',
-      subjects: currentLanguage === 'en' ? ['Math', 'Physics', 'English'] : ['Matemáticas', 'Física', 'Inglés']
-    },
-    {
-      id: 'class-11',
-      name: currentLanguage === 'en' ? 'Class 11' : 'Clase 11',
-      teacher: currentLanguage === 'en' ? 'Mr. James Taylor' : 'Sr. James Taylor',
-      studentCount: 24,
-      color: 'from-teal-400 to-teal-600',
-      icon: 'Star',
-      subjects: currentLanguage === 'en' ? ['Math', 'Chemistry', 'Biology'] : ['Matemáticas', 'Química', 'Biología']
-    },
-    {
-      id: 'class-12',
-      name: currentLanguage === 'en' ? 'Class 12' : 'Clase 12',
-      teacher: currentLanguage === 'en' ? 'Ms. Jennifer White' : 'Sra. Jennifer White',
-      studentCount: 22,
-      color: 'from-indigo-400 to-indigo-600',
-      icon: 'Crown',
-      subjects: currentLanguage === 'en' ? ['Math', 'Physics', 'Computer Science'] : ['Matemáticas', 'Física', 'Informática']
-    }
-  ];
+const classData = [
+  {
+    id: 'class-6',
+    name: currentLanguage === 'en' ? 'Class 6' : 'कक्षा 6',
+    teacher: currentLanguage === 'en' ? 'Ms. Anjali Sharma' : 'सुश्री अंजलि शर्मा',
+    studentCount: 28,
+    color: 'from-blue-400 to-blue-600',
+    icon: 'BookOpen',
+    subjects: currentLanguage === 'en' 
+      ? ['Math', 'Science', 'English'] 
+      : ['गणित', 'विज्ञान', 'अंग्रेज़ी']
+  },
+  {
+    id: 'class-7',
+    name: currentLanguage === 'en' ? 'Class 7' : 'कक्षा 7',
+    teacher: currentLanguage === 'en' ? 'Mr. Rajesh Kumar' : 'श्री राजेश कुमार',
+    studentCount: 32,
+    color: 'from-green-400 to-green-600',
+    icon: 'GraduationCap',
+    subjects: currentLanguage === 'en' 
+      ? ['Math', 'Science', 'History'] 
+      : ['गणित', 'विज्ञान', 'इतिहास']
+  },
+  {
+    id: 'class-8',
+    name: currentLanguage === 'en' ? 'Class 8' : 'कक्षा 8',
+    teacher: currentLanguage === 'en' ? 'Ms. Priya Nair' : 'सुश्री प्रिया नायर',
+    studentCount: 25,
+    color: 'from-purple-400 to-purple-600',
+    icon: 'Users',
+    subjects: currentLanguage === 'en' 
+      ? ['Math', 'Physics', 'Chemistry'] 
+      : ['गणित', 'भौतिक विज्ञान', 'रसायन विज्ञान']
+  },
+  {
+    id: 'class-9',
+    name: currentLanguage === 'en' ? 'Class 9' : 'कक्षा 9',
+    teacher: currentLanguage === 'en' ? 'Mr. Amit Verma' : 'श्री अमित वर्मा',
+    studentCount: 30,
+    color: 'from-orange-400 to-orange-600',
+    icon: 'Award',
+    subjects: currentLanguage === 'en' 
+      ? ['Math', 'Biology', 'Geography'] 
+      : ['गणित', 'जीव विज्ञान', 'भूगोल']
+  },
+  {
+    id: 'class-10',
+    name: currentLanguage === 'en' ? 'Class 10' : 'कक्षा 10',
+    teacher: currentLanguage === 'en' ? 'Ms. Kavita Joshi' : 'सुश्री कविता जोशी',
+    studentCount: 27,
+    color: 'from-red-400 to-red-600',
+    icon: 'Trophy',
+    subjects: currentLanguage === 'en' 
+      ? ['Math', 'Physics', 'English'] 
+      : ['गणित', 'भौतिक विज्ञान', 'अंग्रेज़ी']
+  },
+  {
+    id: 'class-11',
+    name: currentLanguage === 'en' ? 'Class 11' : 'कक्षा 11',
+    teacher: currentLanguage === 'en' ? 'Mr. Suresh Reddy' : 'श्री सुरेश रेड्डी',
+    studentCount: 24,
+    color: 'from-teal-400 to-teal-600',
+    icon: 'Star',
+    subjects: currentLanguage === 'en' 
+      ? ['Math', 'Chemistry', 'Biology'] 
+      : ['गणित', 'रसायन विज्ञान', 'जीव विज्ञान']
+  },
+  {
+    id: 'class-12',
+    name: currentLanguage === 'en' ? 'Class 12' : 'कक्षा 12',
+    teacher: currentLanguage === 'en' ? 'Ms. Neha Singh' : 'सुश्री नेहा सिंह',
+    studentCount: 22,
+    color: 'from-indigo-400 to-indigo-600',
+    icon: 'Crown',
+    subjects: currentLanguage === 'en' 
+      ? ['Math', 'Physics', 'Computer Science'] 
+      : ['गणित', 'भौतिक विज्ञान', 'कंप्यूटर विज्ञान']
+  }
+];
+
 
   const handleClassClick = (classItem) => {
     setSelectedClass(classItem?.id);
@@ -122,7 +137,7 @@ const ClassSelectionGrid = ({ onClassSelect, currentLanguage }) => {
             <div className="flex items-center justify-center space-x-2 mb-4">
               <Icon name="Users" size={16} className="text-muted-foreground" />
               <span className="text-sm text-muted-foreground">
-                {classItem?.studentCount} {currentLanguage === 'en' ? 'students' : 'estudiantes'}
+                {classItem?.studentCount} {currentLanguage === 'en' ? 'students' : 'छात्र'}
               </span>
             </div>
 

@@ -15,29 +15,29 @@ const ContentManagementPanel = ({ onUpload, onCreateQuiz, onManageContent }) => 
     {
       id: 'syllabus',
       icon: 'FileText',
-      title: currentLanguage === 'en' ? 'Upload Syllabus' : 'Subir Programa',
-      description: currentLanguage === 'en' ? 'Add course curriculum and learning objectives' : 'Agregar currículo del curso y objetivos de aprendizaje',
+  title: currentLanguage === 'en' ? 'Upload Syllabus' : 'सिलेबस अपलोड करें',
+  description: currentLanguage === 'en' ? 'Add course curriculum and learning objectives' : 'कोर्स पाठ्यक्रम और सीखने के उद्देश्य जोड़ें',
       color: 'text-primary bg-primary/10'
     },
     {
       id: 'assignment',
       icon: 'PenTool',
-      title: currentLanguage === 'en' ? 'Create Assignment' : 'Crear Tarea',
-      description: currentLanguage === 'en' ? 'Design homework and practice exercises' : 'Diseñar tareas y ejercicios de práctica',
+  title: currentLanguage === 'en' ? 'Create Assignment' : 'असाइनमेंट बनाएं',
+  description: currentLanguage === 'en' ? 'Design homework and practice exercises' : 'होमवर्क और अभ्यास प्रश्न बनाएं',
       color: 'text-secondary bg-secondary/10'
     },
     {
       id: 'quiz',
       icon: 'HelpCircle',
-      title: currentLanguage === 'en' ? 'Build Quiz' : 'Crear Quiz',
-      description: currentLanguage === 'en' ? 'Create interactive assessments and tests' : 'Crear evaluaciones y pruebas interactivas',
+  title: currentLanguage === 'en' ? 'Build Quiz' : 'क्विज बनाएं',
+  description: currentLanguage === 'en' ? 'Create interactive assessments and tests' : 'इंटरएक्टिव मूल्यांकन और टेस्ट बनाएं',
       color: 'text-accent bg-accent/10'
     },
     {
       id: 'multimedia',
       icon: 'Video',
-      title: currentLanguage === 'en' ? 'Add Media' : 'Agregar Multimedia',
-      description: currentLanguage === 'en' ? 'Upload videos, images, and audio content' : 'Subir videos, imágenes y contenido de audio',
+  title: currentLanguage === 'en' ? 'Add Media' : 'मीडिया जोड़ें',
+  description: currentLanguage === 'en' ? 'Upload videos, images, and audio content' : 'वीडियो, चित्र और ऑडियो सामग्री अपलोड करें',
       color: 'text-success bg-success/10'
     }
   ];
@@ -113,10 +113,10 @@ const ContentManagementPanel = ({ onUpload, onCreateQuiz, onManageContent }) => 
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-xl font-semibold text-foreground mb-1">
-            {currentLanguage === 'en' ? 'Content Management' : 'Gestión de Contenido'}
+            {currentLanguage === 'en' ? 'Content Management' : 'सामग्री प्रबंधन'}
           </h2>
           <p className="text-sm text-muted-foreground">
-            {currentLanguage === 'en' ? 'Create and manage your teaching materials' : 'Crear y gestionar sus materiales de enseñanza'}
+            {currentLanguage === 'en' ? 'Create and manage your teaching materials' : 'अपनी शिक्षण सामग्री बनाएं और प्रबंधित करें'}
           </p>
         </div>
         <Button
@@ -127,7 +127,7 @@ const ContentManagementPanel = ({ onUpload, onCreateQuiz, onManageContent }) => 
           iconPosition="left"
           iconSize={16}
         >
-          {currentLanguage === 'en' ? 'Manage All' : 'Gestionar Todo'}
+          {currentLanguage === 'en' ? 'Manage All' : 'सभी प्रबंधित करें'}
         </Button>
       </div>
       {/* Quick Actions Grid */}
@@ -158,19 +158,19 @@ const ContentManagementPanel = ({ onUpload, onCreateQuiz, onManageContent }) => 
       >
         <Icon name="Upload" size={32} className="text-muted-foreground mx-auto mb-3" />
         <h3 className="text-lg font-medium text-foreground mb-2">
-          {currentLanguage === 'en' ? 'Drag & Drop Files Here' : 'Arrastra y Suelta Archivos Aquí'}
+          {currentLanguage === 'en' ? 'Drag & Drop Files Here' : 'यहाँ फाइलें ड्रैग और ड्रॉप करें'}
         </h3>
         <p className="text-sm text-muted-foreground mb-4">
-          {currentLanguage === 'en' ? 'Or click to browse and select files' : 'O haz clic para navegar y seleccionar archivos'}
+          {currentLanguage === 'en' ? 'Or click to browse and select files' : 'या ब्राउज़ करें और फाइलें चुनें'}
         </p>
         <Button variant="outline" size="sm" iconName="FolderOpen" iconPosition="left" iconSize={16}>
-          {currentLanguage === 'en' ? 'Browse Files' : 'Explorar Archivos'}
+          {currentLanguage === 'en' ? 'Browse Files' : 'फाइलें ब्राउज़ करें'}
         </Button>
       </div>
       {/* Recent Uploads */}
       <div>
         <h3 className="text-lg font-medium text-foreground mb-4">
-          {currentLanguage === 'en' ? 'Recent Uploads' : 'Subidas Recientes'}
+          {currentLanguage === 'en' ? 'Recent Uploads' : 'हाल की अपलोड'}
         </h3>
         <div className="space-y-3">
           {recentUploads?.map((upload) => (
@@ -184,15 +184,15 @@ const ContentManagementPanel = ({ onUpload, onCreateQuiz, onManageContent }) => 
                   <div className="flex items-center space-x-4 text-xs text-muted-foreground">
                     <span>{upload?.uploadDate}</span>
                     {upload?.size && <span>{upload?.size}</span>}
-                    {upload?.questions && <span>{upload?.questions} {currentLanguage === 'en' ? 'questions' : 'preguntas'}</span>}
+                    {upload?.questions && <span>{upload?.questions} {currentLanguage === 'en' ? 'questions' : 'प्रश्न'}</span>}
                   </div>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
                 <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(upload?.status)}`}>
                   {currentLanguage === 'en' ? upload?.status : 
-                    upload?.status === 'active' ? 'Activo' : 
-                    upload?.status === 'draft' ? 'Borrador' : 'Inactivo'}
+                    upload?.status === 'active' ? 'सक्रिय' : 
+                    upload?.status === 'draft' ? 'ड्राफ्ट' : 'निष्क्रिय'}
                 </span>
                 <Button variant="ghost" size="sm" iconName="MoreHorizontal" iconSize={16} />
               </div>
